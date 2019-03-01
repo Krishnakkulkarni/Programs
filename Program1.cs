@@ -1,10 +1,11 @@
-﻿namespace FunctionalPrograms
+﻿//-----------------------------------------------------------------------
+// <copyright file="Program1.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace FunctionalPrograms
 {
  using System;
- using System.Collections.Generic;
- using System.Linq;
- using System.Text;
- using System.Threading.Tasks;
 
     /// <summary>
     /// To Replace a string
@@ -18,11 +19,13 @@
        public static void Main(string[] args)
        {
             int ch;
+            string yes;
             do
             {
                 Console.WriteLine(" 1.StringReplace \n 2.FlipCoin \n 3.LeapYear \n 4.PowerOfTwo \n 5.HarmonicNumber \n 6.PrimeFactor ");
-                Console.WriteLine(" 7.Gambler \n 8.CouponNumber \n 9.2DArry \n 10.FindTriplets \n 11.FindThedistance \n");
-                Console.WriteLine("enter the choose");
+                Console.WriteLine(" 7.Gambler \n 8.CouponNumber \n 9.2DArry \n 10.FindTriplets \n 11.FindThedistance \n 12.permutation ");
+                Console.WriteLine(" 13.StopWatch \n 14.TIC_TAC_TOE_GAME \n 15.QudraticEquation \n 16.WindChill");
+                Console.WriteLine("enter the your choose");
                 ch = Convert.ToInt32(Console.ReadLine());
                 switch (ch)
                 {
@@ -42,13 +45,13 @@
                         PowerOfTwo.TwoToThePower();
                         break;
                     case 5:
-                        HarmonicNumber.Harmonicno();
+                        HarmonicNumber.Harmonicnumber();
                         break;
                     case 6:
                         PrimeFactor.Primefactor();
                         break;
                     case 7:
-                        GamblerProg.Gamblerno();
+                        GamblerProgram.Gambler();
                         break;
                     case 8:
                         CouponNumbers.Couponnumbers();
@@ -57,18 +60,34 @@
                         TwoDArray.TwodArray();
                         break;
                     case 10:
-                        ThreeInteger.Integernumber();
+                        FindTriplets.Integernumber();
                         break;
                     case 11:
-                        DistancProgram.CalculateDistance();
+                        DistanceProgram.CalculateDistance();
                         break;
-
+                    case 12:
+                        Permutation.PermutationNumber();
+                        break;
+                    case 13:
+                        StopWatch.Watch();
+                        break;
+                    case 14:
+                        TIC_TAC_TOE.Tic_tac_toe();
+                        break;
+                    case 15:
+                        QudraticEquation.Equation();
+                        break;
+                    case 16:
+                        WindChill.Wind();
+                        break;
                     default:
                         Console.WriteLine("enter the valid choose");
                         break;
                 }
+                Console.WriteLine("do you want conti...");
+                yes = Console.ReadLine();
             }
-            while (ch != 0);
+            while (ch != 0 && yes != "no");
        }
     }
 }

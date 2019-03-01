@@ -47,22 +47,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CouponNumbers.cs" />
-    <Compile Include="DistancProgram.cs" />
+    <Compile Include="DistanceProgram.cs" />
     <Compile Include="FlipCoin.cs" />
-    <Compile Include="GamblerProg.cs" />
+    <Compile Include="GamblerProgram.cs" />
+    <Compile Include="Permutation.cs" />
     <Compile Include="PrimeFactor.cs" />
     <Compile Include="Program1.cs" />
     <Compile Include="LeapYear.cs" />
     <Compile Include="PowerOfTwo.cs" />
     <Compile Include="HarmonicNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QudraticEquation.cs" />
+    <Compile Include="StopWatch.cs" />
     <Compile Include="StringReplace.cs" />
-    <Compile Include="ThreeInteger.cs" />
+    <Compile Include="FindTriplets.cs" />
+    <Compile Include="TIC_TAC_TOE.cs" />
     <Compile Include="TwoDArray.cs" />
     <Compile Include="UtilityClass.cs" />
+    <Compile Include="WindChill.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

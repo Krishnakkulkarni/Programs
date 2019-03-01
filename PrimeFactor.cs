@@ -1,10 +1,11 @@
-﻿namespace FunctionalPrograms
+﻿//-----------------------------------------------------------------------
+// <copyright file="PrimeFactor.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace FunctionalPrograms
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     /// <summary>
     /// To find Prime Factor
@@ -18,8 +19,8 @@
         public static void Primefactor()
         {  
             Console.WriteLine("enter the number");
-            int n = Convert.ToInt32(Console.ReadLine());
-            UtilityClass.primefactor(n);
+            int number = Convert.ToInt32(Console.ReadLine());
+            UtilityClass.Primefactor(number);
         }
     }
 }

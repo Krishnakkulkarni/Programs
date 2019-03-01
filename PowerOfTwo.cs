@@ -1,10 +1,11 @@
-﻿namespace FunctionalPrograms
+﻿//-----------------------------------------------------------------------
+// <copyright file="PowerOfTwo.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace FunctionalPrograms
 {
  using System;
- using System.Collections.Generic;
- using System.Linq;
- using System.Text;
- using System.Threading.Tasks;
 
     /// <summary>
     /// Power of two
@@ -14,12 +15,12 @@
         /// <summary>
         /// define the entry point of the application
         /// </summary>
-        /// <param name="args">The arguments.</param>
+        /// <param name="number">The arguments.</param>
         public static void TwoToThePower()
         {
             Console.WriteLine("enter the number");
-            double n = Convert.ToDouble(Console.ReadLine());
-            UtilityClass.powerOfTwo(n);
+            double number = Convert.ToDouble(Console.ReadLine());
+            UtilityClass.PowerOftwo(number);
         }
     }
 }

@@ -1,4 +1,9 @@
-﻿namespace FunctionalPrograms
+﻿//-----------------------------------------------------------------------
+// <copyright file="FlipCoin.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace FunctionalPrograms
 {
     using System;
     using System.Collections.Generic;
@@ -15,12 +20,11 @@
         /// <summary>
         /// Define the entry point of the application
         /// </summary>
-        /// <param name="args">parameter n</param>
         public static void CoinFlip()
         { 
-            Console.WriteLine("enter the no of times to flip coin ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            UtilityClass.flipCoin(n);
+            Console.WriteLine("Enter the number of times to flip coin ");
+            int noOfTimes = Convert.ToInt32(Console.ReadLine());
+            UtilityClass.FlipCoin(noOfTimes);
         }
     }
 }

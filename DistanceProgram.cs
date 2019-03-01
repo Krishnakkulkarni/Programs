@@ -1,14 +1,16 @@
-﻿namespace FunctionalPrograms
+﻿//-----------------------------------------------------------------------
+// <copyright file="DistanceProgram.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace FunctionalPrograms
 {
  using System;
- using System.Collections.Generic;
- using System.Linq;
- using System.Text;
- using System.Threading.Tasks;
+
  /// <summary>
  /// 
  /// </summary>
-    public class DistancProgram
+    public class DistanceProgram
     {
      /// <summary>
      /// 

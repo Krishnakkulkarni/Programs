@@ -1,10 +1,11 @@
-﻿namespace FunctionalPrograms
+﻿//-----------------------------------------------------------------------
+// <copyright file="HarmonicNumber.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace FunctionalPrograms
 {
  using System;
- using System.Collections.Generic;
- using System.Linq;
- using System.Text;
- using System.Threading.Tasks;
 
     /// <summary>
     /// To find a harmonic number
@@ -14,12 +15,11 @@
      /// <summary>
      /// define the entry point of the application
      /// </summary>
-     /// <param name="args">The arguments.</param>
-        public static void Harmonicno()
+        public static void Harmonicnumber()
         {
             Console.WriteLine("enter the number");
-            double n = Convert.ToDouble(Console.ReadLine());
-            UtilityClass.harmonic(n);
+            double number = Convert.ToDouble(Console.ReadLine());
+            UtilityClass.Harmonic(number);
         }
     }
 }

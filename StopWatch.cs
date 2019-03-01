@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="CouponNumbers.cs" company="Bridgelabz">
+// <copyright file="StopWatch.cs" company="Bridgelabz">
 //     Company copyright tag.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -12,18 +12,19 @@ namespace FunctionalPrograms
  using System.Threading.Tasks;
 
     /// <summary>
-    /// To find Coupon Numbers
+    /// 
     /// </summary>
-    public class CouponNumbers
+    public class StopWatch
     {
      /// <summary>
      /// 
      /// </summary>
-        public static void Couponnumbers()
+        public static void Watch()
         {
-            Console.WriteLine("enter the no");
-            int number = Convert.ToInt32(Console.ReadLine());
-            UtilityClass.GetCoupon(number);
+            Console.WriteLine("Enter the time");
+            int start = Convert.ToInt32(Console.ReadLine());
+            int end = Convert.ToInt32(Console.ReadLine());
+            UtilityClass.Stopwatch(start, end);
         }
     }
 }

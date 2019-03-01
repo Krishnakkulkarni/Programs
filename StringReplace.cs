@@ -1,4 +1,9 @@
-﻿namespace FunctionalPrograms
+﻿//-----------------------------------------------------------------------
+// <copyright file="StringReplace.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace FunctionalPrograms
 {
     using System;
 
@@ -7,7 +12,6 @@
     /// </summary>
     public class StringReplace
     {
-        
         /// <summary>
         /// 
         /// </summary>

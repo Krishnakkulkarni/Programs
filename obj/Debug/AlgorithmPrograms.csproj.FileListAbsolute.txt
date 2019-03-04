@@ -1,0 +1,7 @@
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\bin\Debug\AlgorithmPrograms.exe.config
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\bin\Debug\AlgorithmPrograms.exe
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\bin\Debug\AlgorithmPrograms.pdb
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\obj\Debug\AlgorithmPrograms.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\obj\Debug\AlgorithmPrograms.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\obj\Debug\AlgorithmPrograms.exe
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\obj\Debug\AlgorithmPrograms.pdb

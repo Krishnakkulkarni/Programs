@@ -13,7 +13,7 @@ namespace FunctionalPrograms
     public class TwoDArray
     {
      /// <summary>
-     /// 
+     /// Method to take input as a array
      /// </summary>
         public static void TwodArray()
         {

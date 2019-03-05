@@ -1,26 +1,33 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="DistanceProgram.cs" company="Bridgelabz">
-//     Company copyright tag.
-// </copyright>
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace FunctionalPrograms
 {
- using System;
+    using System;
 
- /// <summary>
- /// 
- /// </summary>
+    /// <summary>
+    /// To find the distance between two points
+    /// </summary>
     public class DistanceProgram
     {
-     /// <summary>
-     /// 
-     /// </summary>
+        /// <summary>
+        /// Method to Calculate the distance
+        /// </summary>
         public static void CalculateDistance()
         {
-            Console.WriteLine("enter the  x and y");
-            int x = Convert.ToInt32(Console.ReadLine());
-            int y = Convert.ToInt32(Console.ReadLine());
-            UtilityClass.Distance(x, y);
+            try
+            {
+                Console.WriteLine("enter the  x and y");
+                int x = Convert.ToInt32(Console.ReadLine());
+                int y = Convert.ToInt32(Console.ReadLine());
+                UtilityClass.Distance(x, y);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="PrimeFactor.cs" company="Bridgelabz">
-//     Company copyright tag.
-// </copyright>
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace FunctionalPrograms
 {
@@ -15,12 +15,19 @@ namespace FunctionalPrograms
         /// <summary>
         /// define the entry point of the application
         /// </summary>
-        /// <param name="args">The arguments.</param>
+        /// <param name="args">The args.</param>
         public static void Primefactor()
-        {  
-            Console.WriteLine("enter the number");
-            int number = Convert.ToInt32(Console.ReadLine());
-            UtilityClass.Primefactor(number);
+        {
+            try
+            {
+                Console.WriteLine("enter the number");
+                int number = Convert.ToInt32(Console.ReadLine());
+                UtilityClass.Primefactor(number);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

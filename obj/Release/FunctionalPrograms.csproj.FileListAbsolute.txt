@@ -1,0 +1,7 @@
+C:\Users\admin\source\repos\FunctionalPrograms\FunctionalPrograms\bin\Release\FunctionalPrograms.exe.config
+C:\Users\admin\source\repos\FunctionalPrograms\FunctionalPrograms\bin\Release\FunctionalPrograms.exe
+C:\Users\admin\source\repos\FunctionalPrograms\FunctionalPrograms\bin\Release\FunctionalPrograms.pdb
+C:\Users\admin\source\repos\FunctionalPrograms\FunctionalPrograms\obj\Release\FunctionalPrograms.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\FunctionalPrograms\FunctionalPrograms\obj\Release\FunctionalPrograms.exe
+C:\Users\admin\source\repos\FunctionalPrograms\FunctionalPrograms\obj\Release\FunctionalPrograms.pdb
+C:\Users\admin\source\repos\FunctionalPrograms\FunctionalPrograms\obj\Release\FunctionalPrograms.csprojAssemblyReference.cache

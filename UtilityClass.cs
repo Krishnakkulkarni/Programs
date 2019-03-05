@@ -1,39 +1,43 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="UtilityClass.cs" company="Bridgelabz">
-//     Company copyright tag.
-// </copyright>
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace FunctionalPrograms
 {
  using System;
+    using System.Text.RegularExpressions;
     using System.Threading;
 
     /// <summary>
-    /// Entering into classes
+    /// Core classes
     /// </summary>
     public class UtilityClass
     {
-        private static int flag;
-
+        /// <summary>
+        /// Taking flag as a private
+        /// </summary>
         /******************ReplaceString*************************/
 
         /// <summary>
-        /// 
+        /// To replace string
         /// </summary>
-        /// <param name="s">string s as a parameter</param>
+        /// <param name="name">string name as a input parameter</param>
         /// <param name="s1">proper name should be entered as a s1 parameter</param>
-        public static void ReplaceString(string s, string s1)
+        public static void ReplaceString(string name, string s1)
         {
             try
             {
-                if (s.Length < 3)
+                //// validation to accept only string 
+                Match match = Regex.Match(name, "[a-z]", RegexOptions.IgnoreCase);
+                if (name.Length >= 3 && match.Success)
                 {
-                    Console.WriteLine("Should have more then three character");
+                    s1 = s1.Replace("<< UserName >>", name);
+                    Console.WriteLine("{0}", s1);
                 }
                 else
                 {
-                    s1 = s1.Replace("<< UserName >>", s);
-                    Console.WriteLine("{0}", s1);
+                    Console.WriteLine("Should have more then three character");
                 }
             }
             catch (Exception e)
@@ -45,7 +49,7 @@ namespace FunctionalPrograms
         /******************flipCoin*************************/
 
         /// <summary>
-        /// 
+        /// To check the number of times the coin flip
         /// </summary>
         /// <param name="noOfTimes">noOfTimes is a parameter</param>
         public static void FlipCoin(int noOfTimes)
@@ -86,7 +90,7 @@ namespace FunctionalPrograms
         /******************LeapYear*************************/
 
         /// <summary>
-        /// 
+        /// To check year is a Leap year or not
         /// </summary>
         /// <param name="year">year as a parameter</param>
         public static void Year(int year)
@@ -111,7 +115,7 @@ namespace FunctionalPrograms
         /******************PowerOfTwo*************************/
 
         /// <summary>
-        /// 
+        /// number to the Power of two
         /// </summary>
         /// <param name="number">The number parameter</param>
         public static void PowerOftwo(double number)
@@ -142,7 +146,7 @@ namespace FunctionalPrograms
         /******************Harmonic*************************/
 
         /// <summary>
-        /// 
+        /// Find nth harmonic number
         /// </summary>
         /// <param name="number">The number parameter</param>
         public static void Harmonic(double number)
@@ -166,9 +170,9 @@ namespace FunctionalPrograms
         /******************primefactor*************************/
 
         /// <summary>
-        /// 
+        /// To find Prime factor
         /// </summary>
-        /// <param name="number">The number parameter</param>
+        /// <param name="number">The number as a parameter</param>
         public static void Primefactor(int number)
         {
             try
@@ -204,7 +208,7 @@ namespace FunctionalPrograms
         /******************Gambler*************************/
 
         /// <summary>
-        /// 
+        /// To find the Gambler number
         /// </summary>
         /// <param name="stake">The $stake parameter</param>
         /// <param name="goal">The goal parameter</param>
@@ -257,7 +261,7 @@ namespace FunctionalPrograms
         /******************CouponNumbers*************************/
 
         /// <summary>
-        /// 
+        /// To find coupon numbers
         /// </summary>
         /// <param name="number">The number parameter</param>
         public static void GetCoupon(int number)
@@ -300,7 +304,7 @@ namespace FunctionalPrograms
         /******************2DArray*************************/
 
         /// <summary>
-        /// 
+        /// Two dimension array
         /// </summary>
         /// <param name="row">The row parameter</param>
         /// <param name="column">The column parameter</param>
@@ -340,7 +344,7 @@ namespace FunctionalPrograms
         /******************Sum of three Integer adds to ZERO*************************/
 
         /// <summary>
-        /// 
+        /// Sum of three Integer adds to ZERO
         /// </summary>
         /// <param name="array">The array parameter</param>
         /// <param name="number">The number parameter</param>
@@ -372,7 +376,7 @@ namespace FunctionalPrograms
         /******************To find Distance*************************/
 
         /// <summary>
-        /// 
+        /// To find Distance between two points
         /// </summary>
         /// <param name="x">It takes x as a source parameter</param>
         /// <param name="y">It takes y as a destination parameter</param>
@@ -394,7 +398,7 @@ namespace FunctionalPrograms
         /******************Print all Permutation*************************/
 
         /// <summary>
-        /// 
+        /// To print all permutation 
         /// </summary>
         /// <param name="str">user input string paramter</param>
         /// <param name="l">left parameter</param>
@@ -404,7 +408,9 @@ namespace FunctionalPrograms
             try
             {
                 if (l == r)
+                {
                     Console.WriteLine(str);
+                }
                 else
                 {
                     for (int i = l; i <= r; i++)
@@ -420,7 +426,8 @@ namespace FunctionalPrograms
                 Console.WriteLine(e.Message);
             }
         }
-        /** 
+
+        /* 
         * Swap Characters at position 
         * param a string value 
         * param i position 1 
@@ -428,6 +435,13 @@ namespace FunctionalPrograms
         * return swapped string 
         */
 
+        /// <summary>
+        /// Method to swap the array elements
+        /// </summary>
+        /// <param name="a">input string as a parameter</param>
+        /// <param name="i">integer i as a parameter</param>
+        /// <param name="j">integer j as a parameter</param>
+        /// <returns>Swap</returns>
         public static string Swap(string a, int i, int j)
         {
             char temp;
@@ -442,7 +456,7 @@ namespace FunctionalPrograms
         /******************StopWatch*************************/
 
         /// <summary>
-        /// 
+        /// To check the elapse of time
         /// </summary>
         /// <param name="start">It takes start as a parameter</param>
         /// <param name="end">It takes end as a parameter</param>
@@ -461,16 +475,24 @@ namespace FunctionalPrograms
 
         /******************TIC_TAC_TOE*************************/
 
-        public static void Game(char[] array, int player, int choice, int flage)
+        /// <summary>
+        /// TIC_TAC_TOE game 
+        /// </summary>
+        /// <param name="array">array as a parameter</param>
+        /// <param name="player">player as a integer parameter</param>
+        /// <param name="choice">choice as a integer parameter</param>
+        /// <param name="flag">flag as a integer parameter</param>
+        public static void Game(char[] array, int player, int choice, int flag)
         {
             try
             {
                 do
                 {
-                    Console.Clear();// whenever loop will be again start then screen will be clear  
+                    Console.Clear(); //// whenever loop will be again start then screen will be clear  
                     Console.WriteLine("Player1:X and Player2:O");
                     Console.WriteLine("\n");
-                    if (player % 2 == 0)//checking the chance of the player  
+                    //// checking the chance of the player
+                    if (player % 2 == 0)   
                     {
                         Console.WriteLine("Player 2 Chance");
                     }
@@ -480,13 +502,13 @@ namespace FunctionalPrograms
                     }
 
                     Console.WriteLine("\n");
-                    Board(array);// calling the board Function 
-                    choice = int.Parse(Console.ReadLine());// Taking users choice  
+                    Board(array); //// calling the board Function 
+                    choice = int.Parse(Console.ReadLine()); //// Taking users choice  
 
-                    // checking that position where user want to run is marked (with X or O) or not  
+                    //// checking that position where user want to run is marked (with X or O) or not  
                     if (array[choice] != 'X' && array[choice] != 'O')
                     {
-                        if (player % 2 == 0) //if chance is of player 2 then mark O else mark X 
+                        if (player % 2 == 0)  
                         {
                             array[choice] = 'O';
                             player++;
@@ -497,24 +519,25 @@ namespace FunctionalPrograms
                             player++;
                         }
                     }
-                    else // If there is any possition where user want to run and that is already marked then show message and load board again 
+                    else  
                     {
                         Console.WriteLine("Sorry the row {0} is already marked with {1}", choice, array[choice]);
                         Console.WriteLine("\n");
                         Console.WriteLine("Please wait 2 second board is loading again.....");
                         Thread.Sleep(2000);
                     }
-                    flag = CheckWin(array);// calling of check win  
-                }
-                while (flag != 1 && flag != -1);// This loof will be run until all cell of the grid is not marked with X and O or some player is not win
 
-                Console.Clear();// clearing the console  
-                Board(array);// getting filled board again  
-                if (flag == 1)// if flag value is 1 then some one has win or means who played marked last time which has win  
+                    flag = CheckWin(array); //// calling of check win  
+                }
+                while (flag != 1 && flag != -1); //// This loof will be run until all cell of the grid is not marked with X and O or some player is not win
+
+                Console.Clear(); //// clearing the console  
+                Board(array); //// getting filled board again  
+                if (flag == 1) 
                 {
                     Console.WriteLine("Player {0} has won", (player % 2) + 1);
                 }
-                else// if flag value is -1 the match will be draw and no one is winner  
+                else
                 {
                     Console.WriteLine("Draw");
                 }
@@ -526,7 +549,11 @@ namespace FunctionalPrograms
                 Console.WriteLine(e.Message);
             }
         }
-        // Board method which creats board  
+        
+        /// <summary>
+        /// Method to print the board
+        /// </summary>
+        /// <param name="array">array as a parameter</param>
         public static void Board(char[] array)
         {
             Console.WriteLine("     |     |      ");
@@ -548,52 +575,38 @@ namespace FunctionalPrograms
             Console.WriteLine("     |     |      ");
         }
 
-        //Checking that any player has won or not  
+        /// <summary>
+        /// Method to Check who won the game
+        /// </summary>
+        /// <param name="array">array as a parameter</param>
+        /// <returns>CheckWin</returns>
         public static int CheckWin(char[] array)
         {
-            #region Horzontal Winning Condtion
-            //Winning Condition For First Row   
-
+            //// Winning Condition For First Row  
             if (array[1] == array[2] && array[2] == array[3])
             {
                 return 1;
             }
-
-            //Winning Condition For Second Row   
             else if (array[4] == array[5] && array[5] == array[6])
             {
                 return 1;
             }
-
-            //Winning Condition For Third Row  
             else if (array[6] == array[7] && array[7] == array[8])
             {
                 return 1;
             }
-            #endregion
-            #region vertical Winning Condtion
-
-            //Winning Condition For First Column     
             else if (array[1] == array[4] && array[4] == array[7])
             {
                 return 1;
             }
-            //Winning Condition For Second Column  
-
             else if (array[2] == array[5] && array[5] == array[8])
             {
                 return 1;
             }
-            //Winning Condition For Third Column  
-
             else if (array[3] == array[6] && array[6] == array[9])
             {
                 return 1;
             }
-
-            #endregion
-            #region Diagonal Winning Condition
-
             else if (array[1] == array[5] && array[5] == array[9])
             {
                 return 1;
@@ -602,18 +615,10 @@ namespace FunctionalPrograms
             {
                 return 1;
             }
-
-            #endregion
-            #region Checking For Draw
-
-            // If all the cells or values filled with X or O then any player has won the match  
-
             else if (array[1] != '1' && array[2] != '2' && array[3] != '3' && array[4] != '4' && array[5] != '5' && array[6] != '6' && array[7] != '7' && array[8] != '8' && array[9] != '9')
             {
                 return -1;
             }
-            #endregion
-
             else
             {
                 return 0;
@@ -622,12 +627,18 @@ namespace FunctionalPrograms
 
         /******************QuadraticEquation*************************/
 
+        /// <summary>
+        /// To find QuadraticEquation
+        /// </summary>
+        /// <param name="a">a as a integer parameter</param>
+        /// <param name="b">b as a integer parameter</param>
+        /// <param name="c">c as a integer parameter</param>
         public static void Quadratic(int a, int b, int c)
         {
             try
             {
                 double d, x1, x2;
-                d = b * b - 4 * a * c;
+                d = (b * b) - (4 * a * c);
                 if (d == 0)
                 {
                     Console.Write("Both roots are equal.\n");
@@ -639,10 +650,8 @@ namespace FunctionalPrograms
                 else if (d > 0)
                 {
                     Console.Write("Both roots are real and diff-2\n");
-
                     x1 = (-b + Math.Sqrt(d)) / (2 * a);
                     x2 = (-b - Math.Sqrt(d)) / (2 * a);
-
                     Console.Write("First Root1= {0}\n", x1);
                     Console.Write("Second Root2= {0}\n", x2);
                 }
@@ -659,11 +668,16 @@ namespace FunctionalPrograms
 
         /******************WindChill*************************/
 
+        /// <summary>
+        /// To calculate WindChill
+        /// </summary>
+        /// <param name="t">t as a temperature parameter</param>
+        /// <param name="v">v as a speed parameter</param>
         public static void Chill(double t, double v)
         {
             try
             {
-                double Wind = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * Math.Pow(v, 0.16);
+                double wind = 35.74 + (0.6215 * t) + (0.4275 * (t - 35.75) * Math.Pow(v, 0.16));
                 if (t > 150)  
                 {
                     Console.WriteLine("Temperature should be below 150");
@@ -674,7 +688,7 @@ namespace FunctionalPrograms
                 }
                 else
                 {
-                    Console.WriteLine(" The Wind Chill {0}", Wind);
+                    Console.WriteLine(" The Wind Chill {0}", wind);
                 }
             }
             catch (Exception e)

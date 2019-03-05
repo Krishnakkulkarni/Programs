@@ -61,7 +61,7 @@
     <Compile Include="StopWatch.cs" />
     <Compile Include="StringReplace.cs" />
     <Compile Include="FindTriplets.cs" />
-    <Compile Include="TIC_TAC_TOE.cs" />
+    <Compile Include="Tic_Tac_Toe.cs" />
     <Compile Include="TwoDArray.cs" />
     <Compile Include="UtilityClass.cs" />
     <Compile Include="WindChill.cs" />

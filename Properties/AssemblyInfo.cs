@@ -1,7 +1,7 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="AssemblyInfo.cs" company="Bridgelabz">
-//     Company copyright tag.
-// </copyright>
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 using System.Reflection;
 using System.Runtime.CompilerServices;

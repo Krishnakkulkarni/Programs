@@ -1,7 +1,7 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="HarmonicNumber.cs" company="Bridgelabz">
-//     Company copyright tag.
-// </copyright>
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace FunctionalPrograms
 {
@@ -17,9 +17,16 @@ namespace FunctionalPrograms
      /// </summary>
         public static void Harmonicnumber()
         {
-            Console.WriteLine("enter the number");
-            double number = Convert.ToDouble(Console.ReadLine());
-            UtilityClass.Harmonic(number);
+            try
+            {
+                Console.WriteLine("enter the number");
+                double number = Convert.ToDouble(Console.ReadLine());
+                UtilityClass.Harmonic(number);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

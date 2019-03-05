@@ -1,7 +1,7 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="LeapYear.cs" company="Bridgelabz">
-//     Company copyright tag.
-// </copyright>
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace FunctionalPrograms
 {
@@ -17,9 +17,16 @@ using System;
         /// </summary>
         public static void Yearleap()
         {
-            Console.WriteLine("enter the year");
-            int year = Convert.ToInt32(Console.ReadLine());
-            UtilityClass.Year(year);
+            try
+            {
+                Console.WriteLine("enter the year");
+                int year = Convert.ToInt32(Console.ReadLine());
+                UtilityClass.Year(year);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

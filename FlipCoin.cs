@@ -1,7 +1,7 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="FlipCoin.cs" company="Bridgelabz">
-//     Company copyright tag.
-// </copyright>
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace FunctionalPrograms
 {
@@ -21,10 +21,17 @@ namespace FunctionalPrograms
         /// Define the entry point of the application
         /// </summary>
         public static void CoinFlip()
-        { 
-            Console.WriteLine("Enter the number of times to flip coin ");
-            int noOfTimes = Convert.ToInt32(Console.ReadLine());
-            UtilityClass.FlipCoin(noOfTimes);
+        {
+            try
+            {
+                Console.WriteLine("Enter the number of times to flip coin ");
+                int noOfTimes = Convert.ToInt32(Console.ReadLine());
+                UtilityClass.FlipCoin(noOfTimes);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

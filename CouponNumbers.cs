@@ -1,7 +1,7 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="CouponNumbers.cs" company="Bridgelabz">
-//     Company copyright tag.
-// </copyright>
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace FunctionalPrograms
 {
@@ -16,14 +16,21 @@ namespace FunctionalPrograms
     /// </summary>
     public class CouponNumbers
     {
-     /// <summary>
-     /// 
-     /// </summary>
+        /// <summary>
+        /// Method to find coupon number
+        /// </summary>
         public static void Couponnumbers()
         {
-            Console.WriteLine("enter the no");
-            int number = Convert.ToInt32(Console.ReadLine());
-            UtilityClass.GetCoupon(number);
-        }
+            try
+            {
+                Console.WriteLine("enter the no");
+                int number = Convert.ToInt32(Console.ReadLine());
+                UtilityClass.GetCoupon(number);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        } 
     }
 }

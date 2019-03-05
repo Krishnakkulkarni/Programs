@@ -1,7 +1,7 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="PowerOfTwo.cs" company="Bridgelabz">
-//     Company copyright tag.
-// </copyright>
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace FunctionalPrograms
 {
@@ -13,14 +13,20 @@ namespace FunctionalPrograms
     public class PowerOfTwo
     {
         /// <summary>
-        /// define the entry point of the application
+        /// To find the Power of two
         /// </summary>
-        /// <param name="number">The arguments.</param>
         public static void TwoToThePower()
         {
-            Console.WriteLine("enter the number");
-            double number = Convert.ToDouble(Console.ReadLine());
-            UtilityClass.PowerOftwo(number);
+            try
+            {
+                Console.WriteLine("enter the number");
+                double number = Convert.ToDouble(Console.ReadLine());
+                UtilityClass.PowerOftwo(number);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

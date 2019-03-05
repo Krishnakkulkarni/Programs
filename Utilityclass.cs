@@ -344,8 +344,35 @@ namespace AlgorithmPrograms
 
         /******************Search word from file*************************/
 
-           
-
+            /// <summary>
+            /// Search Word from the file
+            /// </summary>
+            /// <param name="line">line as a parameter</param>
+            /// <param name="key">key as a parameter</param>
+        public static void SearchWord(string line, string key)
+        {
+            try
+            {
+                string[] words = line.Split(',');
+                int count = 0;
+                for (int i = 0; i < words.Length; i++)
+                {
+                    if (key.Equals(words[i]))
+                    {
+                        Console.WriteLine("the {0} word found in a list", words[i]);
+                        count++;
+                    }
+                }
+                if (count == 0)
+                {
+                    Console.WriteLine("The word not found")
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
 
         /******************InsertionSort*************************/
 

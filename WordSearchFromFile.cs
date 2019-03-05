@@ -23,7 +23,11 @@ using System.Threading.Tasks;
         {
             try
             {
-
+                string line System.IO.File.ReadAllText("C:/Users/admin/source/repos/ConsoleApp1/AlgorithmPrograms/Utilityclass.cs");
+                Console.WriteLine(line);
+                Console.WriteLine("Enter the word to search");
+                string key = Console.ReadLine();
+                Utilityclass.SearchWord(line,key);
             }
             catch (Exception e)
             {

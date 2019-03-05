@@ -365,7 +365,7 @@ namespace AlgorithmPrograms
                 }
                 if (count == 0)
                 {
-                    Console.WriteLine("The word not found")
+                    Console.WriteLine("The word not found");
                 }
             }
             catch (Exception e)

@@ -6,8 +6,9 @@
 namespace DataStructures
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
+    using OrderedList.Balancedparaentises;
+    using OrderedList.Banking;
+    using OrderedList.PalindromeChecker;
    
     /// <summary>
     /// Entry point of the Main class
@@ -27,8 +28,9 @@ namespace DataStructures
                 while (flag)
                 {
                     Console.WriteLine("Select the program from below .Enter 0 to exit");
-                    Console.WriteLine("1. Unordered LinkedList");
-
+                    Console.WriteLine(" 1. Unordered LinkedList \n 2. Ordered LinkedList \n 3. Balanced Parentheses \n 4. Banking cash Counter");
+                    Console.WriteLine(" 5. Palindrome Checker \n 8.Calendar");
+                    Console.WriteLine("Enter the number you want");
                     try
                     {
                         option = Convert.ToInt32(Console.ReadLine());
@@ -49,7 +51,37 @@ namespace DataStructures
 
                         case 1:
                             {
-                                DataStructurePrograms.Unordered.LinkedList_UnOrdered.UnOrderedList();
+                                OrderedList.Unordered.LinkedList_UnOrdered.UnOrderedList();
+                                break;
+                            }
+
+                        case 2:
+                            {
+                                OrderedList.List.Ordered();
+                                break;
+                            }
+
+                        case 3:
+                            {
+                                Balanced.CheckParentheses();
+                                break;
+                            }
+
+                        case 4:
+                            {
+                                CashCounter.Counter();
+                                break;
+                            }
+
+                        case 5:
+                            {
+                                PalindromeChecker.CheckPalindrome();
+                                break;
+                            }
+
+                        case 6:
+                            {
+                                Calendar.PrintCalendar();
                                 break;
                             }
 

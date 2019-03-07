@@ -3,7 +3,7 @@
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
-namespace DataStructurePrograms.Unordered
+namespace OrderedList.Unordered
 {
     using System;
     using System.Collections.Generic;

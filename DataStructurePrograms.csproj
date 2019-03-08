@@ -57,6 +57,14 @@
     <Compile Include="CalendarProgram\Calendar.cs" />
     <Compile Include="CalendarProgram\PrintCalendar.cs" />
     <Compile Include="CalendarProgram\Utility.cs" />
+    <Compile Include="CalendarQueue\CalendarInput.cs" />
+    <Compile Include="CalendarQueue\Queue.cs" />
+    <Compile Include="CalendarQueue\QueueCalendar.cs" />
+    <Compile Include="CalendarQueue\Utility.cs" />
+    <Compile Include="CalendarStack\InputCalendar.cs" />
+    <Compile Include="CalendarStack\Stack.cs" />
+    <Compile Include="CalendarStack\StackCalendar.cs" />
+    <Compile Include="CalendarStack\Utility.cs" />
     <Compile Include="OrderedList\List.cs" />
     <Compile Include="OrderedList\Node.cs" />
     <Compile Include="OrderedList\SinglyLinkedList.cs" />

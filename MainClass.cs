@@ -6,8 +6,11 @@
 namespace DataStructures
 {
     using System;
+    using DataStructurePrograms.CalendarQueue;
+    using DataStructurePrograms.CalendarStack;
     using OrderedList.Balancedparaentises;
     using OrderedList.Banking;
+    using OrderedList.CalendarProgram;
     using OrderedList.PalindromeChecker;
    
     /// <summary>
@@ -23,13 +26,13 @@ namespace DataStructures
         {
             try
             {
-                int option = -1; ////option for choosing a number from Utility.
-                bool flag = true; ////flag for keep looping untill a valid option from the existing Utility Class
+                int option = -1; //// option for choosing a number from Utility.
+                bool flag = true; //// flag for keep looping untill a valid option from the existing Utility Class
                 while (flag)
                 {
-                    Console.WriteLine("Select the program from below .Enter 0 to exit");
+                    Console.WriteLine(" \n Select the program from below .Enter 0 to exit");
                     Console.WriteLine(" 1. Unordered LinkedList \n 2. Ordered LinkedList \n 3. Balanced Parentheses \n 4. Banking cash Counter");
-                    Console.WriteLine(" 5. Palindrome Checker \n 8.Calendar");
+                    Console.WriteLine(" 5. Palindrome Checker \n 6. CalendarQueue \n 7. CalendarStack");
                     Console.WriteLine("Enter the number you want");
                     try
                     {
@@ -81,10 +84,15 @@ namespace DataStructures
 
                         case 6:
                             {
-                                Calendar.PrintCalendar();
+                                CalendarInput.CalendarStart();
                                 break;
                             }
 
+                        case 7:
+                            {
+                                InputCalendar.StartCalendar();
+                                break;
+                            }
                         default:
                             {
                                 Console.WriteLine("Invalid Option");

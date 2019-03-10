@@ -46,38 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2DArrayPrimeNumber\2DPrime.cs" />
+    <Compile Include="2DArrayPrimeNumber\PrimeNumber.cs" />
     <Compile Include="Balancedparaentises\Balanced.cs" />
     <Compile Include="Balancedparaentises\Stack.cs" />
-    <Compile Include="Balancedparaentises\Utility.cs" />
     <Compile Include="Banking\Transaction.cs" />
     <Compile Include="Banking\CashCounter.cs" />
     <Compile Include="Banking\Queue.cs" />
     <Compile Include="Banking\Person.cs" />
-    <Compile Include="Banking\Utility.cs" />
+    <Compile Include="BinaryProgram\BinaryTreeInput.cs" />
+    <Compile Include="BinaryProgram\BinaryTreePrint.cs" />
     <Compile Include="CalendarProgram\Calendar.cs" />
-    <Compile Include="CalendarProgram\PrintCalendar.cs" />
-    <Compile Include="CalendarProgram\Utility.cs" />
+    <Compile Include="CalendarProgram\CalendarInput.cs" />
     <Compile Include="CalendarQueue\CalendarInput.cs" />
     <Compile Include="CalendarQueue\Queue.cs" />
     <Compile Include="CalendarQueue\QueueCalendar.cs" />
-    <Compile Include="CalendarQueue\Utility.cs" />
     <Compile Include="CalendarStack\InputCalendar.cs" />
     <Compile Include="CalendarStack\Stack.cs" />
     <Compile Include="CalendarStack\StackCalendar.cs" />
-    <Compile Include="CalendarStack\Utility.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="OrderedList\List.cs" />
-    <Compile Include="OrderedList\Node.cs" />
     <Compile Include="OrderedList\SinglyLinkedList.cs" />
     <Compile Include="PalindromeChecker\Deque.cs" />
     <Compile Include="PalindromeChecker\Node.cs" />
     <Compile Include="PalindromeChecker\PalindromCheck.cs" />
-    <Compile Include="PalindromeChecker\Utility.cs" />
+    <Compile Include="PrimeAnagramNumberQueue\LinkedListQueue.cs" />
+    <Compile Include="PrimeAnagramNumberQueue\PrimeAnagramQueue.cs" />
+    <Compile Include="PrimeAnagramnumberStack\LinkedListStack.cs" />
+    <Compile Include="PrimeAnagramnumberStack\PrimeAnagramStack.cs" />
+    <Compile Include="PrimeAnagramProgram\PrimeAnagramNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unordered\ILinkedList.cs" />
-    <Compile Include="Unordered\SinglyLinkedList.cs" />
     <Compile Include="Unordered\Node.cs" />
+    <Compile Include="Unordered\SinglyLinkedList.cs" />
     <Compile Include="Unordered\LinkedList_UnOrdered.cs" />
     <Compile Include="MainClass.cs" />
+    <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

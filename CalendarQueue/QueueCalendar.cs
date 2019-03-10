@@ -5,11 +5,7 @@
 //-----------------------------------------------------------------------
 namespace DataStructurePrograms.CalendarQueue
 {
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+    using System;
 
     /// <summary>
     /// Calendar Class
@@ -58,9 +54,9 @@ using System.Threading.Tasks;
                 Console.WriteLine();
 
                 //// leaves empty spaces till the first day starts.
-                for (int i = 2; i < day; i++)
+                for (int i = 0; i < day; i++)
                 {
-                    Console.Write("");
+                    Console.Write("    ");
                 }
 
                 for (int i = 1; i <= numberOfDaysArray[month]; i++)

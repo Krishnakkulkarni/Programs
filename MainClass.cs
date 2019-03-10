@@ -6,11 +6,15 @@
 namespace DataStructures
 {
     using System;
+    using DataStructurePrograms._2DArrayPrimeNumber;
+    using DataStructurePrograms.BinaryProgram;
     using DataStructurePrograms.CalendarQueue;
     using DataStructurePrograms.CalendarStack;
+    using DataStructurePrograms.PrimeAnagramNumber;
+    using DataStructurePrograms.PrimeAnagramNumberQueue;
+    using DataStructurePrograms.PrimeAnagramnumberStack;
     using OrderedList.Balancedparaentises;
     using OrderedList.Banking;
-    using OrderedList.CalendarProgram;
     using OrderedList.PalindromeChecker;
    
     /// <summary>
@@ -31,8 +35,9 @@ namespace DataStructures
                 while (flag)
                 {
                     Console.WriteLine(" \n Select the program from below .Enter 0 to exit");
-                    Console.WriteLine(" 1. Unordered LinkedList \n 2. Ordered LinkedList \n 3. Balanced Parentheses \n 4. Banking cash Counter");
-                    Console.WriteLine(" 5. Palindrome Checker \n 6. CalendarQueue \n 7. CalendarStack");
+                    Console.WriteLine(" 1.  Unordered LinkedList \n 2.  Ordered LinkedList \n 3.  Balanced Parentheses \n 4.  Banking cash Counter");
+                    Console.WriteLine(" 5.  Palindrome Checker \n 6.  HashingProgram \n 7.  Binary search tree \n 8.  Calendar \n 9.  CalendarQueue");
+                    Console.WriteLine(" 10. CalendarStack \n 11. 2DArrayPrimeNumber \n 12. PrimeAnagramNumber \n 13. PrimeAnagramStack \n 14. PrimeAnagramQueue \n");
                     Console.WriteLine("Enter the number you want");
                     try
                     {
@@ -82,15 +87,57 @@ namespace DataStructures
                                 break;
                             }
 
-                        case 6:
+                        /*case 6:
+                            {
+                                HashingProgram.Hashing();
+                                break;
+                            }*/
+
+                        case 7:
+                            {
+                                BinaryTreeInput.BinaryTree();
+                                break;
+                            }
+
+                        case 8:
                             {
                                 CalendarInput.CalendarStart();
                                 break;
                             }
 
-                        case 7:
+                        case 9:
+                            {
+                                CalendarInput.CalendarStart();
+                                break;
+                            }
+
+                        case 10:
                             {
                                 InputCalendar.StartCalendar();
+                                break;
+                            }
+
+                        case 11:
+                            {
+                                _2DPrime._2DArray();
+                                break;
+                            }
+
+                        case 12:
+                            {
+                                PrimeAnagramNumber.PrimeNumbersAnagramNumbers();
+                                break;
+                            }
+
+                        case 13:
+                            {
+                                PrimeAnagramStack.PrimeAndAnagramNumbers();
+                                break;
+                            }
+
+                        case 14:
+                            {
+                                PrimeAnagramQueue.PrimeAnagramNumbers();
                                 break;
                             }
                         default:

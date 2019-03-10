@@ -3,7 +3,7 @@
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
-namespace DataStructurePrograms.OrderedList
+namespace DataStructurePrograms
 {
     using System;
     using System.Collections.Generic;
@@ -25,6 +25,8 @@ namespace DataStructurePrograms.OrderedList
         /// The next
         /// </summary>
         private Node next;
+
+        public object Next { get; internal set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Node"/> class.

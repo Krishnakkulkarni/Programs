@@ -1,9 +1,9 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PrintCalendar.cs" company="Bridgelabz">
+// <copyright file="CalendarInput.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
-namespace OrderedList.CalendarProgram
+namespace DataStructurePrograms.CalendarProgram
 {
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
     /// <summary>
     /// Takes input 
     /// </summary>
-    public class PrintCalendar
+    public class CalendarInput
     {
         /// <summary>
         /// Starts the calendar.

@@ -3,7 +3,7 @@
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
-namespace OrderedList.CalendarProgram
+namespace DataStructurePrograms.CalendarProgram
 {
 using System;
 using System.Collections.Generic;
@@ -44,7 +44,7 @@ using System.Threading.Tasks;
 
                 for (int i = 0; i < day; i++)
                 {
-                    Console.Write("   ");
+                    Console.Write(" ");
                 }
 
                 for (int i = 0; i <= numberOfDaysArray[month]; i++)
@@ -55,6 +55,8 @@ using System.Threading.Tasks;
                     if ((i + day) % 7 == 0 || (i == numberOfDaysArray[month]))
                     {
                         Console.WriteLine();
+
+
                     }
                 }
 

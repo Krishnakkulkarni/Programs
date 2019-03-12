@@ -36,7 +36,7 @@ using System.Threading.Tasks;
                     return;
                 }
 
-                if (Utility.IsNumber(args[0]) == false)
+                if (UtilityClass.IsNumber(args[0]) == false)
                 {
                     Console.WriteLine("Invalid Month");
                     Console.Read();
@@ -51,7 +51,7 @@ using System.Threading.Tasks;
                     return;
                 }
 
-                if (Utility.IsNumber(args[1]) == false)
+                if (UtilityClass.IsNumber(args[1]) == false)
                 {
                     Console.WriteLine("Invalid year");
                     Console.Read();
@@ -69,9 +69,9 @@ using System.Threading.Tasks;
 
                 Calendar.PrintCalendar(month, year);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

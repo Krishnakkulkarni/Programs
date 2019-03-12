@@ -5,10 +5,10 @@
 //-----------------------------------------------------------------------
 namespace OrderedList.PalindromeChecker
 {
-using System;
+    using System;
 
     /// <summary>
-    /// Deque Nodes
+    /// De queue Node
     /// </summary>
     /// <typeparam name="T">any parameter</typeparam>
     public class DequeNode<T>

@@ -5,11 +5,7 @@
 //-----------------------------------------------------------------------
 namespace DataStructurePrograms.CalendarStack
 {
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+    using System;
 
     /// <summary>
     /// Print calendar of given month and year
@@ -32,7 +28,7 @@ using System.Threading.Tasks;
                 int[] numberOfDaysArray = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
                 ////to check if the given year is aleap year
-                if (month == 2 && Utility.CheckLeapYear(year))
+                if (month == 2 && UtilityClass.CheckLeapYear(year))
                 {
                     numberOfDaysArray[month] = 29;
                 }
@@ -42,7 +38,7 @@ using System.Threading.Tasks;
                 Console.WriteLine(" S  M  T  W  TH  F  S");
 
                 ////getting the first day of specified month and year
-                int day = Utility.DayOfWeek(month, 1, year);
+                int day = UtilityClass.DayOfWeek(month, 1, year);
 
                 for (int i = numberOfDaysArray[month]; i >= 0; i--)
                 {
@@ -72,9 +68,9 @@ using System.Threading.Tasks;
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

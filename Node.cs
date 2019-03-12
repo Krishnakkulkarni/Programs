@@ -26,7 +26,14 @@ namespace DataStructurePrograms
         /// </summary>
         private Node next;
 
-        public object Next { get; internal set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Node"/> class.
+        /// </summary>
+        /// <param name="o">The o.</param>
+        public Node(object o)
+        {
+            this.data = o;
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Node"/> class.
@@ -38,15 +45,16 @@ namespace DataStructurePrograms
             this.data = o;
             this.next = n;
         }
+        
+        /// <summary>
+        /// Gets the Next
+        /// </summary>
+        public object Next { get; internal set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Node"/> class.
+        /// Gets the Data
         /// </summary>
-        /// <param name="o">The o.</param>
-        public Node(object o)
-        {
-            this.data = o;
-        }
+        public object Data { get; internal set; }
 
         /// <summary>
         /// Sets the data.

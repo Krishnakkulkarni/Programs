@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="2DArrayPrimeNumber\2DPrime.cs" />
+    <Compile Include="2DArrayPrimeNumber\_2DPrime.cs" />
     <Compile Include="2DArrayPrimeNumber\PrimeNumber.cs" />
     <Compile Include="Balancedparaentises\Balanced.cs" />
     <Compile Include="Balancedparaentises\Stack.cs" />
@@ -65,23 +65,25 @@
     <Compile Include="CalendarStack\Stack.cs" />
     <Compile Include="CalendarStack\StackCalendar.cs" />
     <Compile Include="Node.cs" />
-    <Compile Include="OrderedList\List.cs" />
+    <Compile Include="OrderedList\ILinkedList.cs" />
+    <Compile Include="OrderedList\InputForOrdered.cs" />
+    <Compile Include="OrderedList\Node.cs" />
     <Compile Include="OrderedList\SinglyLinkedList.cs" />
-    <Compile Include="PalindromeChecker\Deque.cs" />
-    <Compile Include="PalindromeChecker\Node.cs" />
-    <Compile Include="PalindromeChecker\PalindromCheck.cs" />
+    <Compile Include="PalindromeCheck\DequenodePrint.cs" />
+    <Compile Include="PalindromeCheck\DequeNode.cs" />
+    <Compile Include="PalindromeCheck\PalindromeChecker.cs" />
     <Compile Include="PrimeAnagramNumberQueue\LinkedListQueue.cs" />
     <Compile Include="PrimeAnagramNumberQueue\PrimeAnagramQueue.cs" />
     <Compile Include="PrimeAnagramnumberStack\LinkedListStack.cs" />
     <Compile Include="PrimeAnagramnumberStack\PrimeAnagramStack.cs" />
     <Compile Include="PrimeAnagramProgram\PrimeAnagramNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Unordered\ILinkedList.cs" />
-    <Compile Include="Unordered\Node.cs" />
-    <Compile Include="Unordered\SinglyLinkedList.cs" />
-    <Compile Include="Unordered\LinkedList_UnOrdered.cs" />
-    <Compile Include="MainClass.cs" />
+    <Compile Include="UnOrderedList\ILinkedList.cs" />
+    <Compile Include="UnOrderedList\InputForUnordered.cs" />
+    <Compile Include="UnOrderedList\Node.cs" />
+    <Compile Include="UnOrderedList\SinglyLinkedList.cs" />
     <Compile Include="Utility.cs" />
+    <Compile Include="UtilityClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

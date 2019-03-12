@@ -1,17 +1,16 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="LinkedList_UnOrdered.cs" company="Bridgelabz">
+// <copyright file="InputForUnordered.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
-namespace OrderedList.Unordered
+namespace DataStructurePrograms.UnOrderedList
 {
- using System;
- using System.Collections.Generic;
+    using System;
 
     /// <summary>
-    /// class for Unordered List
+    /// Takes input required for this class.
     /// </summary>
-    public class LinkedList_UnOrdered
+    public class InputForUnordered
     {
         /// <summary>
         /// Unordered LinkedList
@@ -23,15 +22,25 @@ namespace OrderedList.Unordered
                 string path = string.Empty;
                 SinglyLinkedList<string> singlyLinkedList = new SinglyLinkedList<string>();
 
-                string dataFromFile = System.IO.File.ReadAllText("C:/Users/admin/source/repos/DataStructurePrograms/text.txt");
-                string[] splitArray = dataFromFile.Split();
-                foreach (string text in splitArray)
+               /* bool loopPath = true;
+                while (loopPath)
                 {
-                    Console.Write(text + "\t");
-                }
+                    Console.WriteLine("Specify the File path");
+                    path = Console.ReadLine();
 
-                Console.WriteLine();
-                
+                    if (File.Exists(path) == false)
+                    {
+                        Console.WriteLine("Specified Path does not exist");
+                        continue;
+                    }
+
+                    loopPath = false;
+                }
+                */
+                string dataFromFile = System.IO.File.ReadAllText("C:/Users/admin/source/repos/DataStructurePrograms/text.txt");
+                Console.WriteLine(dataFromFile);
+                string[] splitArray = dataFromFile.Split(' ');
+
                 foreach (string word in splitArray)
                 {
                     singlyLinkedList.Add(word.Trim());
@@ -40,7 +49,7 @@ namespace OrderedList.Unordered
                 Console.WriteLine("Enter the word you want to search");
                 string wordToSearch = Console.ReadLine();
 
-                if (singlyLinkedList.Contain(wordToSearch))
+                if (singlyLinkedList.Contains(wordToSearch))
                 {
                     if (singlyLinkedList.Delete(wordToSearch))
                     {
@@ -53,7 +62,7 @@ namespace OrderedList.Unordered
                     Console.WriteLine("The word " + wordToSearch + " not found , Added to linked list and written to file");
                 }
 
-                singlyLinkedList.WriteToFile(path);
+                singlyLinkedList.WriteToFile("C:/Users/admin/source/repos/DataStructurePrograms/text.txt");
                 Console.Read();
             }
             catch (Exception ex)

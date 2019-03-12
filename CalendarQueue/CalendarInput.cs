@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="QueueCalendar.cs" company="Bridgelabz">
+// <copyright file="CalendarInput.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
@@ -28,7 +28,7 @@ namespace DataStructurePrograms.CalendarQueue
                     Console.WriteLine("Enter the month");
                     string stringMonth = Console.ReadLine();
 
-                    if (Utility.IsNumber(stringMonth) == false)
+                    if (UtilityClass.IsNumber(stringMonth) == false)
                     {
                         Console.WriteLine("Invalid Month");
 
@@ -51,7 +51,7 @@ namespace DataStructurePrograms.CalendarQueue
                     Console.WriteLine("Enter the year");
                     string stringYear = Console.ReadLine();
 
-                    if (Utility.IsNumber(stringYear) == false)
+                    if (UtilityClass.IsNumber(stringYear) == false)
                     {
                         Console.WriteLine("Invalid Month");
 
@@ -71,9 +71,9 @@ namespace DataStructurePrograms.CalendarQueue
 
                 QueueCalendar.PrintCalendar(month, year);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

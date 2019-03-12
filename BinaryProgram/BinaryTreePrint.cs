@@ -15,7 +15,7 @@ namespace DataStructurePrograms.BinaryProgram
         /// <summary>
         /// Counts the binary tree.
         /// </summary>
-        /// <param name="numberOfElements">The number of elements.</param>
+        /// <param name="number">The number of elements.</param>
         /// <returns> returns the Count of Binary trees</returns>
         public static double CountBinaryTree(int number)
         {
@@ -23,22 +23,20 @@ namespace DataStructurePrograms.BinaryProgram
             {
                 int count; ////Calculated value for numerator
 
-
                 count = FindFactorial(2 * number) / (FindFactorial(number + 1) * FindFactorial(number));
-
 
                 return count;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
         /// <summary>
         /// returns the factorial of given Number
         /// </summary>
-        /// <param name="number">takes int</param>
+        /// <param name="number">takes integer</param>
         /// <returns>returns the factorial</returns>
         public static int FindFactorial(int number)
         {
@@ -54,9 +52,9 @@ namespace DataStructurePrograms.BinaryProgram
 
                 return factorial;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

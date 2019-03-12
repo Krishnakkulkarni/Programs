@@ -1,11 +1,11 @@
-﻿
-namespace DataStructurePrograms.Unordered
+﻿//-----------------------------------------------------------------------
+// <copyright file="Node.cs" company="Bridgelabz">
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
+//-----------------------------------------------------------------------
+namespace DataStructurePrograms.UnOrderedList
 {
     using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
     /// <summary>
     /// node class

@@ -3,26 +3,21 @@
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
-namespace OrderedList.Unordered
+namespace DataStructurePrograms.OrderedList
 {
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+    using System;
 
     /// <summary>
-    /// linked list Interface
+    /// Linked list Interface
     /// </summary>
-    /// <typeparam name="T">any parameter </typeparam>
-    public interface ILinkedList<T>
+    public interface ILinkedList
     {
         /// <summary>
-        /// Adds the specified word.
+        /// Adds the specified number.
         /// </summary>
-        /// <param name="word">The word.</param>
+        /// <param name="number">The number.</param>
         /// <returns>returns true or false</returns>
-        bool Add(T word);
+        bool Add(int number);
 
         /// <summary>
         /// Determines whether this instance is empty.
@@ -35,23 +30,23 @@ using System.Threading.Tasks;
         /// <summary>
         /// Sizes this instance.
         /// </summary>
-        /// <returns>returns size</returns>
+        /// <returns>returns true or false</returns>
         long Size();
 
         /// <summary>
-        /// Deletes the specified word to search.
+        /// Deletes the specified number to search.
         /// </summary>
-        /// <param name="wordToSearch">The word to search.</param>
+        /// <param name="numberToSearch">The number to search.</param>
         /// <returns>returns true or false</returns>
-        bool Delete(string wordToSearch);
+        bool Delete(int numberToSearch);
 
         /// <summary>
         /// Inserts the specified data.
         /// </summary>
         /// <param name="data">The data.</param>
         /// <param name="pos">The position.</param>
-        /// <returns>returns true or false </returns>
-        bool Insert(T data, long pos);
+        /// <returns>returns true or false</returns>
+        bool Insert(int data, long pos);
 
         /// <summary>
         /// Prints this instance.
@@ -65,6 +60,6 @@ using System.Threading.Tasks;
         /// <returns>
         ///   <c>true</c> if [contains] [the specified word]; otherwise, <c>false</c>.
         /// </returns>
-        bool Contains(T word);
+        bool Contains(int word);
     }
 }

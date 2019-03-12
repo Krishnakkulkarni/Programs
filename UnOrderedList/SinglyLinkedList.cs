@@ -3,18 +3,16 @@
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
-namespace OrderedList.Unordered
+namespace DataStructurePrograms.UnOrderedList
 {
-    using DataStructurePrograms.Unordered;
     using System;
- using System.Collections.Generic;
 
     /// <summary>
     /// Singly Linked list
     /// </summary>
-    /// <typeparam name="T">any parameter</typeparam>
+    /// <typeparam name="T"> any parameter</typeparam>
     /// <seealso cref="DataStructures.LinkedList_UnOrdered_.LinkedList{T}" />
-    public class SinglyLinkedList<T> : LinkedList<T>
+    public class SinglyLinkedList<T> : ILinkedList<T>
     {
         /// <summary>
         /// The head
@@ -69,7 +67,7 @@ namespace OrderedList.Unordered
         /// <returns>
         /// <c>true</c> if [contains] [the specified word]; otherwise, <c>false</c>.
         /// </returns>
-        public bool Contain(T word)
+        public bool Contains(T word)
         {
             try
             {
@@ -94,7 +92,7 @@ namespace OrderedList.Unordered
         }
 
         /// <summary>
-        /// Delete Method used to remove string
+        /// Deletes the specified word to delete.
         /// </summary>
         /// <param name="wordToDelete">The word to delete.</param>
         /// <returns>returns true or false</returns>
@@ -145,10 +143,10 @@ namespace OrderedList.Unordered
         }
 
         /// <summary>
-        /// Insert Method used to insert strings
+        /// Inserts the specified data.
         /// </summary>
-        /// <param name="data">The data</param>
-        /// <param name="pos">The position</param>
+        /// <param name="data">The data.</param>
+        /// <param name="pos">The position.</param>
         /// <returns> returns true or false </returns>
         public bool Insert(T data, long pos)
         {
@@ -186,7 +184,7 @@ namespace OrderedList.Unordered
         }
 
         /// <summary>
-        /// Check whether file is empty.
+        /// Determines whether this instance is empty.
         /// </summary>
         /// <returns>
         /// <c>true</c> if this instance is empty; otherwise, <c>false</c>.
@@ -211,7 +209,7 @@ namespace OrderedList.Unordered
         }
 
         /// <summary>
-        /// Print Method used to Print string
+        /// Prints this instance.
         /// </summary>
         public void Print()
         {
@@ -238,7 +236,7 @@ namespace OrderedList.Unordered
         }
 
         /// <summary>
-        /// Size of the list
+        /// Sizes this instance.
         /// </summary>
         /// <returns> returns size</returns>
         public long Size()
@@ -247,7 +245,7 @@ namespace OrderedList.Unordered
         }
 
         /// <summary>
-        /// Reposition the list
+        /// Repositions this instance.
         /// </summary>
         public void Reposition()
         {
@@ -270,9 +268,9 @@ namespace OrderedList.Unordered
         }
 
         /// <summary>
-        /// Writes to file
+        /// Writes to file.
         /// </summary>
-        /// <param name="path">The path</param>
+        /// <param name="path">The path.</param>
         /// <returns>returns true or false</returns>
         public bool WriteToFile(string path)
         {

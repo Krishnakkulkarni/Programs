@@ -28,7 +28,7 @@ namespace DataStructurePrograms.CalendarQueue
                 string[] days = { "S", "M", "Tu", "W", "Th", "F", "S" };
 
                 ////to check if the given year is aleap year
-                if (month == 2 && Utility.CheckLeapYear(year))
+                if (month == 2 && UtilityClass.CheckLeapYear(year))
                 {
                     numberOfDaysArray[month] = 29;
                 }
@@ -38,7 +38,7 @@ namespace DataStructurePrograms.CalendarQueue
                 Console.WriteLine(" S   M   T   W   TH   F   S");
 
                 //// to get the first day of the given month.
-                int day = Utility.DayOfWeek(month, 1, year);
+                int day = UtilityClass.DayOfWeek(month, 1, year);
 
                 //// enqueing all the days of specified month.
                 for (int i = 1; i < numberOfDaysArray[month]; i++)
@@ -63,7 +63,7 @@ namespace DataStructurePrograms.CalendarQueue
                 {
                     if (i < 10)
                     {
-                        Console.Write("  " + queueInt.Dequeue() + " ");
+                        Console.Write("  " + queueInt.Deque() + " ");
                     }
 
                     if (i > 9)
@@ -78,9 +78,9 @@ namespace DataStructurePrograms.CalendarQueue
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

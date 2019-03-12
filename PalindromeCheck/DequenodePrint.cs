@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Deque.cs" company="Bridgelabz">
+// <copyright file="Dequenode.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
@@ -8,10 +8,10 @@ namespace OrderedList.PalindromeChecker
     using System;
 
     /// <summary>
-    /// Deque class
+    /// De queue class
     /// </summary>
     /// <typeparam name="T">any parameter</typeparam>
-    public class Deque<T>
+    public class Dequenode<T>
     {
         /// <summary>
         /// The front
@@ -53,9 +53,9 @@ namespace OrderedList.PalindromeChecker
 
                 this.size++; ////increasing the size of queue
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -83,9 +83,9 @@ namespace OrderedList.PalindromeChecker
 
                 this.size++;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -111,9 +111,9 @@ namespace OrderedList.PalindromeChecker
                 this.size--;
                 return dataToRemove;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -140,9 +140,9 @@ namespace OrderedList.PalindromeChecker
                 this.size--;
                 return dataToRemove;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -165,9 +165,9 @@ namespace OrderedList.PalindromeChecker
                     return false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -181,9 +181,9 @@ namespace OrderedList.PalindromeChecker
             {
                 return this.size;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

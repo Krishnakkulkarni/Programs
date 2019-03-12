@@ -37,7 +37,7 @@ namespace OrderedList.Balancedparaentises
                     Console.WriteLine("Enter the Expression");
                     userExpression = Console.ReadLine();
 
-                    if (Utility.CheckString(userExpression))
+                    if (UtilityClass.CheckString(userExpression))
                     {
                         Console.WriteLine("invlaid Expression");
                         continue;

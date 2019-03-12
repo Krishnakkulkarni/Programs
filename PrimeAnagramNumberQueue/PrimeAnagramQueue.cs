@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="PrimeAnagramQueue.cs" company="Bridgelabz">
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
+//-----------------------------------------------------------------------
 namespace DataStructurePrograms.PrimeAnagramNumberQueue
 {
+    using System;
+
     /// <summary>
     /// PrimeAnagramQueue class
     /// </summary>
@@ -26,7 +27,7 @@ namespace DataStructurePrograms.PrimeAnagramNumberQueue
                 for (int i = 2; i <= 1000; i++)
                 {
                     //// Checks for prime number
-                    if (Utility.IsPrimeNumber(i))
+                    if (UtilityClass.IsPrimeNumber(i))
                     {
                         //// Adding prime numbers to array
                         array1[j] = i;
@@ -55,7 +56,7 @@ namespace DataStructurePrograms.PrimeAnagramNumberQueue
                         string string2 = array1[l].ToString();
 
                         //// Checks if 2 strings are anagram or not
-                        if (Utility.Anagram(string1, string2))
+                        if (UtilityClass.Anagram(string1, string2))
                         {
                             //// enqueue into the list
                             linkedListQueue.Enqueue(string1);

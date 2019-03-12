@@ -5,12 +5,8 @@
 //-----------------------------------------------------------------------
 namespace OrderedList.PalindromeChecker
 {
-    using DataStructurePrograms;
     using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+    using DataStructurePrograms;
 
     /// <summary>
     /// Input for palindrome
@@ -25,7 +21,7 @@ using System.Threading.Tasks;
             string userString = string.Empty;
             try
             {
-                Deque<char> deque = new Deque<char>();
+                Dequenode<char> deque = new Dequenode<char>();
 
                 bool flag = true; //// keeps asking for a string (NO EMPTY STRING ALLOWED)
                 while (flag)
@@ -33,7 +29,7 @@ using System.Threading.Tasks;
                     Console.WriteLine("Enter the String");
                     userString = Console.ReadLine();
 
-                    if (Utility.CheckString(userString))
+                    if (UtilityClass.CheckString(userString))
                     {
                         Console.WriteLine("Empty string not allowed");
                         continue;
@@ -61,9 +57,9 @@ using System.Threading.Tasks;
 
                 Console.WriteLine("Given String is a Palindrome");
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

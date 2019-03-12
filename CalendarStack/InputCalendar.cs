@@ -32,7 +32,7 @@ using System.Threading.Tasks;
                     Console.WriteLine("Enter the month");
                     string stringMonth = Console.ReadLine();
 
-                    if (Utility.IsNumber(stringMonth) == false)
+                    if (UtilityClass.IsNumber(stringMonth) == false)
                     {
                         Console.WriteLine("Invalid Month");
 
@@ -55,7 +55,7 @@ using System.Threading.Tasks;
                     Console.WriteLine("Enter the year");
                     string stringYear = Console.ReadLine();
 
-                    if (Utility.IsNumber(stringYear) == false)
+                    if (UtilityClass.IsNumber(stringYear) == false)
                     {
                         Console.WriteLine("Invalid Month");
 

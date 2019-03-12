@@ -1,71 +1,251 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="SinglyLinkedList.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
-// <creator name = "Krishna Kulkarni"/>
+// <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace DataStructurePrograms.OrderedList
 {
     using System;
 
     /// <summary>
-    /// Class SinglyLinkedList of Ordered List
+    /// Singly linked list
     /// </summary>
-    public class SinglyLinkedList
+    /// <seealso cref="DataStructures.LinkedList_Ordered_.ILinkedList" />
+    public class SinglyLinkedList : ILinkedList
     {
         /// <summary>
-        /// Node is null
+        /// The head
         /// </summary>
-        private Node first;
+        private Node head;
 
         /// <summary>
-        /// Size is null
+        /// The last
         /// </summary>
-        private int size = 0;
+        private Node last;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SinglyLinkedList"/> class.
+        /// The size/
         /// </summary>
-        public SinglyLinkedList()
-        {
-            this.first = null;
-            this.size = 0;
-        }
+        private long size = 0;
 
         /// <summary>
-        /// Adds the specified data
+        /// Sorts the linked list.
         /// </summary>
-        /// <param name="data">The data.</param>
-        public void Add(object data)
+        /// <param name="head">The head.</param>
+        public static void SortLinkedList(Node head)
         {
             try
             {
-                //// Checks for the size is 0
-                if (this.IsEmpty())
-                {
-                    this.first = new Node(data, null);
-                    this.size++;
-                }
-                else
-                {
-                    //// initializing first node as current node
-                    Node current = this.first;
-                    Node temp = new Node(data, null);
+                Node i;
+                Node j;
 
-                    //// Loops over till the current node pointer is not null
-                    while (current.GetNext() != null)
+                i = head;
+
+                //// using Bubble sort method to sort the linked list
+                for (i = head; i.Next != null; i = i.Next)
+                {
+                    for (j = i.Next; j != null; j = j.Next)
                     {
-                        //// Current node points to the next pointer
-                        current = current.GetNext();
+                        if (i.Data > j.Data)
+                        {
+                            int temp = i.Data;
+                            i.Data = j.Data;
+                            j.Data = temp;
+                        }
                     }
-
-                    // temp.SetNext(current);
-                    current.SetNext(temp);
-                    this.size++;
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Adds the specified number.
+        /// </summary>
+        /// <param name="number">The number.</param>
+        /// <returns>
+        /// returns true or false
+        /// </returns>
+        public bool Add(int number)
+        {
+            try
+            {
+                Node n = new Node(number, this.size); ////A new node is created whenever Add is invoked
+                this.size++;
+
+                //// if the head is pointing to Null that means its the first Node
+                if (this.head == null && this.last == null)
+                {
+                    this.head = n;
+                    this.last = n;
+                }
+                else
+                {
+                    this.last.Next = n; //// pointing the last node to the new node
+                    this.last = n;
+                }
+
+                SortLinkedList(this.head);
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Determines whether this instance contains the object.
+        /// </summary>
+        /// <param name="word">The number.</param>
+        /// <returns>
+        /// <c>true</c> if [contains] [the specified number]; otherwise, <c>false</c>.
+        /// </returns>
+        public bool Contains(int word)
+        {
+            try
+            {
+                Node temp = this.head;
+
+                //// looping till the last node, the last nodes next always points to null.
+                while (temp != null)
+                {
+                    if (temp.Data == word)
+                    {
+                        return true;
+                    }
+
+                    temp = temp.Next;
+                }
+
+                return false;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified number to delete.
+        /// </summary>
+        /// <param name="numberToDelete">The number to delete.</param>
+        /// <returns>returns true or false</returns>
+        public bool Delete(int numberToDelete)
+        {
+            try
+            {
+                //// checking if atleast one Node is present
+                if (this.head == null)
+                {
+                    Console.WriteLine("list is already empty");
+                    return false;
+                }
+                else
+                {
+                    Node temp = this.head;
+                    Node remove = null;
+
+                    if (temp.Data.Equals(numberToDelete))
+                    {
+                        remove = temp;
+                        this.head = temp.Next;
+                        return true;
+                    }
+
+                    //// iterating over all nodes and checking for each node's data
+                    for (int i = 0; i < this.size; i++)
+                    {
+                        if (temp.Next.Data.Equals(numberToDelete))
+                        {
+                            remove = temp.Next;
+                            temp.Next = remove.Next;
+                            break;
+                        }
+
+                        temp = temp.Next;
+                    }
+
+                    Console.WriteLine("removed " + remove.Data);
+                    remove.Next = null;
+
+                    this.Reposition();
+
+                    this.size = this.size - 1;
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Inserts the specified data.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="pos">The position.</param>
+        /// <returns> returns true or false </returns>
+        public bool Insert(int data, long pos)
+        {
+            try
+            {
+                if (pos > this.size)
+                {
+                    Console.WriteLine("Specified position is greater than existing size");
+                    return false;
+                }
+                else
+                {
+                    Node n = new Node(data, pos);
+
+                    Node temp = this.head;
+
+                    for (int i = 0; i < pos - 1; i++)
+                    {
+                        temp = temp.Next;
+                    }
+
+                    Node n1 = temp.Next;
+                    temp.Next = n;
+                    n.Next = n1;
+                    temp = null;
+                    this.size++;
+                    this.Reposition();
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Determines whether this instance is empty.
+        /// </summary>
+        /// <returns>
+        /// <c>true</c> if this instance is empty; otherwise, <c>false</c>.
+        /// </returns>
+        public bool IsEmpty()
+        {
+            try
+            {
+                if (this.size == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
             }
         }
 
@@ -76,188 +256,91 @@ namespace DataStructurePrograms.OrderedList
         {
             try
             {
-                //// Checks for the list is empty or not
-                if (this.IsEmpty())
+                if (this.head == null)
                 {
-                    Console.WriteLine("Empty Linked List");
+                    Console.WriteLine("List is empty");
                 }
-
-                //// Declaring first node as temporarory node 
-                Node temp = this.first;
-
-                //// Loops over till the last node is null
-                while (temp != null)
+                else
                 {
-                    Console.Write(" {0}", temp.GetData());
-                    temp = temp.GetNext();
-                }
-
-                Console.WriteLine();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-
-        /// <summary>
-        /// Determines whether this instance is empty.
-        /// </summary>
-        /// <returns>
-        ///   <c>true</c> if this instance is empty; otherwise, <c>false</c>.
-        /// </returns>
-        public bool IsEmpty()
-        {
-            //// checks for the size is empty
-            if (this.size == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// to search the element
-        /// </summary>
-        /// <param name="element">element name</param>
-        /// <returns>returns element</returns>
-        public bool Search(object element)
-        {
-            try
-            {
-                //// Takeing the first node as temporary
-                Node temp = this.first;
-
-                //// Loops over till temp null
-                while (temp != null)
-                {
-                    //// Checks if data is equal to the elemnt in file   
-                    if (temp.GetData().Equals(element))
+                    Node temp = this.head;
+                    while (temp != null)
                     {
-                        return true;
+                        Console.WriteLine(temp.Data + " " + temp.Position);
+                        temp = temp.Next;
                     }
-
-                    //// Temp points to the next element
-                    temp = temp.GetNext();
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-            }
-
-            return false;
-        }
-
-        /// <summary>
-        /// Removes the specified singly linked list.
-        /// </summary>
-        /// <param name="singlyLinkedList">The singly linked list.</param>
-        /// <param name="element">The element.</param>
-        public void Remove(SinglyLinkedList singlyLinkedList, object element)
-        {
-            try
-            {
-                Node temp = singlyLinkedList.first;
-                Node prev = temp;
-                //// checks if the temp node is the element present
-
-                if (temp.GetData() == element)
-                {
-                    singlyLinkedList.first = temp.GetNext();
-                }
-
-                while (temp != null)
-                {
-                    if (temp.GetData().Equals(element))
-                    {
-                        prev.SetNext(temp.GetNext());
-                        return;
-                    }
-
-                    prev = temp;
-                    temp = temp.GetNext();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
+                throw new Exception(e.Message);
             }
         }
 
         /// <summary>
-        /// Counts this instance.
+        /// Sizes this instance.
         /// </summary>
-        /// <returns>returns count</returns>
-        public int Count()
+        /// <returns> returns size</returns>
+        public long Size()
         {
             return this.size;
         }
 
         /// <summary>
-        /// Files the path unordered.
+        /// Repositions this instance.
         /// </summary>
-        /// <returns>string array</returns>
-        public string FilePathUnordered()
+        public void Reposition()
         {
-            //// Path is set to null
-            string path = null;
             try
             {
-                path = @"Text.txt";
+                Node temp = this.head;
+
+                int i = 0;
+
+                while (temp != null)
+                {
+                    temp.Position = i++;
+                    temp = temp.Next;
+                }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                throw new Exception(e.Message);
             }
-
-            return path;
         }
 
         /// <summary>
-        /// Strings to string array.
+        /// Writes to file.
         /// </summary>
-        /// <param name="s">The s.</param>
-        /// <returns>string array</returns>
-        public string[] StringToStringArray(string s)
+        /// <param name="path">The path.</param>
+        /// <returns>returns true or false</returns>
+        public bool WriteToFile(string path)
         {
-            int count = 0, i = 0;
-
-            //// seperating words to charachter
-            foreach (char char1 in s)
+            try
             {
-                if (char1 == ' ')
+                if (this.head == null)
                 {
-                    count++;
-                }
-            }
-
-            //// Stores the word in array
-            string[] stringarray = new string[count + 1];
-            string temp = string.Empty;
-
-            //// Loops over to print the array
-            foreach (char c in s)
-            {
-                //// if space is encountered we store it to next element
-                if (c == ' ')
-                {
-                    stringarray[i] = temp;
-                    temp = string.Empty;
-                    i++;
+                    Console.WriteLine("list is already empty");
+                    return false;
                 }
                 else
                 {
-                    temp = temp + c;
+                    Node temp = this.head;
+                    using (var writer = new System.IO.StreamWriter("C:/Users/admin/source/repos/DataStructurePrograms/Text1.txt"))
+                    {
+                        while (temp != null)
+                        {
+                            writer.Write(temp.Data.ToString().Trim() + " ");
+                            temp = temp.Next;
+                        }
+                    }
                 }
 
-                stringarray[i] = temp;
+                return true;
             }
-
-            return stringarray;
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }

@@ -69,9 +69,9 @@ namespace DataStructurePrograms.PrimeAnagramNumberQueue
         }
 
         /// <summary>
-        /// Dequeue this instance.
+        /// De queue the instance.
         /// </summary>
-        public void Dequeue()
+        public void Deque()
         {
             try
             {

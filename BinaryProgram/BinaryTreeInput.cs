@@ -26,7 +26,7 @@ namespace DataStructurePrograms.BinaryProgram
                     Console.WriteLine("Enter the Number Of Elements");
                     string stringElements = Console.ReadLine();
 
-                    if (Utility.IsNumber(stringElements) == false)
+                    if (UtilityClass.IsNumber(stringElements) == false)
                     {
                         Console.WriteLine("Invalid Input");
                         continue;
@@ -46,9 +46,9 @@ namespace DataStructurePrograms.BinaryProgram
                 double numberOfBinaryTrees = BinaryTreePrint.CountBinaryTree(numberOfElements);
                 Console.WriteLine("Number Of Binary trees possible = " + numberOfBinaryTrees);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

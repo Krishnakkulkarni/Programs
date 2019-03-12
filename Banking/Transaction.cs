@@ -1,21 +1,17 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="TransactionInput.cs" company="Bridgelabz">
+// <copyright file="Transaction.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace OrderedList.Banking
 {
-    using DataStructurePrograms;
     using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+    using DataStructurePrograms;
 
     /// <summary>
     /// Can deposit and withdraw
     /// </summary>
-    public class TransactionInput
+    public class Transaction
     {
         /// <summary>
         /// Deposits the details.
@@ -33,7 +29,7 @@ using System.Threading.Tasks;
                     Console.WriteLine("Enter the Money you want to Deposite,You have currently " + person.Balance + " in your account");
                     string amountToDeposite = Console.ReadLine();
 
-                    if (Utility.IsNumber(amountToDeposite) == false)
+                    if (UtilityClass.IsNumber(amountToDeposite) == false)
                     {
                         Console.WriteLine("Invalid Input");
                         continue;
@@ -68,7 +64,7 @@ using System.Threading.Tasks;
                     Console.WriteLine("Enter the Money you want to Withdraw,You have currently " + person.Balance + " in your account");
                     string amountToWithdraw = Console.ReadLine();
 
-                    if (Utility.IsNumber(amountToWithdraw) == false)
+                    if (UtilityClass.IsNumber(amountToWithdraw) == false)
                     {
                         Console.WriteLine("Invalid Input");
                         continue;

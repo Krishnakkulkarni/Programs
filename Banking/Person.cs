@@ -44,9 +44,9 @@ using System.Threading.Tasks;
 
                 this.balance = balance;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -94,9 +94,9 @@ using System.Threading.Tasks;
                 Console.WriteLine("your total Balance = " + this.balance);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -120,9 +120,9 @@ using System.Threading.Tasks;
                 Console.WriteLine("Remaining balance = " + this.balance);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

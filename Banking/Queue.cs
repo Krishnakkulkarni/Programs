@@ -117,17 +117,17 @@ using System.Threading.Tasks;
                     return true;
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
         /// <summary>
-        /// Dequeues this instance.
+        /// De queue the instance.
         /// </summary>
         /// <returns>returns true or false</returns>
-        public bool Dequeue()
+        public bool Deque()
         {
             try
             {
@@ -146,9 +146,9 @@ using System.Threading.Tasks;
                     return true;
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -172,9 +172,9 @@ using System.Threading.Tasks;
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -188,9 +188,9 @@ using System.Threading.Tasks;
             {
                 return this.size;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

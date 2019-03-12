@@ -1,8 +1,12 @@
-﻿
+﻿//-----------------------------------------------------------------------
+// <copyright file="_2DPrime.cs" company="Bridgelabz">
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
+//-----------------------------------------------------------------------
 namespace DataStructurePrograms._2DArrayPrimeNumber
 {
-using System;
-using System.Collections;
+    using System;
+    using System.Collections;
 
     /// <summary>
     /// Stores the prime number in 2D array

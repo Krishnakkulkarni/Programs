@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="PrimeAnagramNumber.cs" company="Bridgelabz">
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
+//-----------------------------------------------------------------------
 namespace DataStructurePrograms.PrimeAnagramNumber
 {
+    using System;
+
     /// <summary>
     /// Class for finding prime numbers are anagram or not 
     /// </summary>
@@ -19,7 +20,7 @@ namespace DataStructurePrograms.PrimeAnagramNumber
             try
             {
                 //// Creating a utility object
-                Utility u = new Utility();
+                UtilityClass u = new UtilityClass();
 
                 //// Initializing it to zero
                 int i = 0, j, count, n;
@@ -46,7 +47,7 @@ namespace DataStructurePrograms.PrimeAnagramNumber
                     for (j = 1; j < 100; j++)
                     {
                         //// Checks for prime Numbers
-                        if (Utility.IsPrimeNumber(primeArray[i, 0] + j))
+                        if (UtilityClass.IsPrimeNumber(primeArray[i, 0] + j))
                         {
                             count++;
 
@@ -78,7 +79,7 @@ namespace DataStructurePrograms.PrimeAnagramNumber
                         for (n = j + 1; primeArray[i, n] != 0; n++)
                         {
                             //// Checks if prime numbers are anagram or not
-                            if (Utility.Anagram(Convert.ToString(primeArray[i, j]), Convert.ToString(primeArray[i, n])))
+                            if (UtilityClass.Anagram(Convert.ToString(primeArray[i, j]), Convert.ToString(primeArray[i, n])))
                             {
                                 count++;
                                 anagramNumbers[i, count++] = primeArray[i, j];
@@ -108,4 +109,3 @@ namespace DataStructurePrograms.PrimeAnagramNumber
         }
     }
 }
-

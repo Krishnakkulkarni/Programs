@@ -1,4 +1,8 @@
-﻿
+﻿//-----------------------------------------------------------------------
+// <copyright file="PrimeNumber.cs" company="Bridgelabz">
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
+//-----------------------------------------------------------------------
 namespace DataStructurePrograms._2DArrayPrimeNumber
 {
     using System;
@@ -31,7 +35,7 @@ namespace DataStructurePrograms._2DArrayPrimeNumber
                     Console.WriteLine("Enter the Initial Range");
                     string strInitial = Console.ReadLine();
 
-                    if (Utility.IsNumber(strInitial) == false)
+                    if (UtilityClass.IsNumber(strInitial) == false)
                     {
                         Console.WriteLine("Invalid Number");
                         continue;
@@ -54,7 +58,7 @@ namespace DataStructurePrograms._2DArrayPrimeNumber
                     Console.WriteLine("Enter the Last Number ,you want to print Prime Numbers till");
                     string strLast = Console.ReadLine();
 
-                    if (Utility.IsNumber(strLast) == false)
+                    if (UtilityClass.IsNumber(strLast) == false)
                     {
                         Console.WriteLine("Invalid Number");
                         continue;

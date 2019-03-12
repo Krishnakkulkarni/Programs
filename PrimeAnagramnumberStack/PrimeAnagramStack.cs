@@ -1,4 +1,8 @@
-﻿
+﻿//-----------------------------------------------------------------------
+// <copyright file="PrimeAnagramStack.cs" company="Bridgelabz">
+//     Company @ 2019 </copyright>
+// <creator name = "Krishna Kulkarni" />
+//-----------------------------------------------------------------------
 namespace DataStructurePrograms.PrimeAnagramnumberStack
 {
 using System;
@@ -27,7 +31,7 @@ using System.Threading.Tasks;
                 for (int i = 2; i <= 1000; i++)
                 {
                     //// Checks for number is prime or not
-                    if (Utility.IsPrimeNumber(i))
+                    if (UtilityClass.IsPrimeNumber(i))
                     {
                         array1[j] = i;
                         j++;
@@ -55,7 +59,7 @@ using System.Threading.Tasks;
                         string string2 = array1[l].ToString();
 
                         //// Checks for the two string is anagram or not
-                        if (Utility.Anagram(string1, string2))
+                        if (UtilityClass.Anagram(string1, string2))
                         {
                             //// Pushes the string to stack
                             linkedListStack.Push(string1);

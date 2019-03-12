@@ -5,12 +5,8 @@
 //-----------------------------------------------------------------------
 namespace OrderedList.Banking
 {
-    using DataStructurePrograms;
     using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+    using DataStructurePrograms;
 
     /// <summary>
     /// Simulates Banking cash Counter
@@ -39,7 +35,7 @@ using System.Threading.Tasks;
                 {
                     Console.WriteLine("Enter the Number of people in Queue");
                     string stringNumberOfPeople = Console.ReadLine();
-                    if (Utility.IsNumber(stringNumberOfPeople) == false)
+                    if (UtilityClass.IsNumber(stringNumberOfPeople) == false)
                     {
                         Console.WriteLine("Invalid Input ");
                         continue;
@@ -65,20 +61,20 @@ using System.Threading.Tasks;
                         Console.WriteLine("Enter the Name for the " + personNumber + " person");
                         personName = Console.ReadLine();
 
-                        if (Utility.CheckString(personName))
+                        if (UtilityClass.CheckString(personName))
                         {
                             Console.WriteLine("Please Provide a name");
                             continue;
                         }
 
-                        if (Utility.ContainsCharacter(personName))
+                        if (UtilityClass.ContainsCharacter(personName))
                         {
                             Console.WriteLine("No Characters allowed");
                             continue;
                         }
 
                         //// checks if person name contains any Number in it.
-                        if (Utility.IsNumber(personName))
+                        if (UtilityClass.IsNumber(personName))
                         {
                             Console.WriteLine("Please provide a proper name");
                             continue;
@@ -94,7 +90,7 @@ using System.Threading.Tasks;
                         Console.WriteLine("Enter the Balance for person " + personName);
                         string stringBalance = Console.ReadLine();
 
-                        if (Utility.IsNumber(stringBalance) == false)
+                        if (UtilityClass.IsNumber(stringBalance) == false)
                         {
                             Console.WriteLine("invalid input");
                             continue;
@@ -129,7 +125,7 @@ using System.Threading.Tasks;
                     Console.WriteLine("3) Check the Size of queue");
                     string stringOption = Console.ReadLine();
 
-                    if (Utility.IsNumber(stringOption) == false)
+                    if (UtilityClass.IsNumber(stringOption) == false)
                     {
                         Console.WriteLine("Please provide Correct input");
                         continue;
@@ -140,8 +136,8 @@ using System.Threading.Tasks;
                     {
                         case 1:
                             {
-                                TransactionInput.DepositeDetails(personArray[person]);
-                                queue.Dequeue();
+                                Transaction.DepositeDetails(personArray[person]);
+                                queue.Deque();
                                 person = person + 1;
 
                                 if (queue.CheckSize() == 0)
@@ -154,8 +150,8 @@ using System.Threading.Tasks;
 
                         case 2:
                             {
-                                TransactionInput.WithdrawlDetails(personArray[person]);
-                                queue.Dequeue();
+                                Transaction.WithdrawlDetails(personArray[person]);
+                                queue.Deque();
                                 person = person + 1;
                                 if (queue.CheckSize() == 0)
                                 {

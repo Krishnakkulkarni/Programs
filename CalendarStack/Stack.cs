@@ -5,12 +5,7 @@
 //-----------------------------------------------------------------------
 namespace DataStructurePrograms.CalendarStack
 {
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+    using System;
 
     /// <summary>
     /// stack class
@@ -44,9 +39,9 @@ using System.Threading.Tasks;
                 this.stackArray = new int[this.maxSize];
                 this.top = -1;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -62,9 +57,9 @@ using System.Threading.Tasks;
                 this.top++; ////increasing top value after pushing each element
                 this.stackArray[this.top] = data;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -84,9 +79,9 @@ using System.Threading.Tasks;
                 this.top--; ////decreasing top value after pushing each element
                 return this.stackArray[this.top];
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -100,9 +95,9 @@ using System.Threading.Tasks;
             {
                 return this.stackArray[this.top]; //// returns the top most element in stack
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -118,9 +113,9 @@ using System.Threading.Tasks;
             {
                 return this.top == -1; //// if top value equals to -1,it means the stack is empty.
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
 
@@ -136,9 +131,9 @@ using System.Threading.Tasks;
             {
                 return this.top == this.maxSize - 1;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

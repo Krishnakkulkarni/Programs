@@ -7,35 +7,35 @@ namespace DataStructurePrograms
 {
     using System;
 
+    /// <summary>
+    /// Utility class
+    /// </summary>
+    public class UtilityClass
+    {
         /// <summary>
-        /// Utility class
+        /// Checks the string is empty or Null.
         /// </summary>
-        public class UtilityClass
+        /// <param name="name">The name.</param>
+        /// <returns>returns false if string is null or empty</returns>
+        public static bool CheckString(string name)
         {
-            /// <summary>
-            /// Checks the string is empty or Null.
-            /// </summary>
-            /// <param name="name">The name.</param>
-            /// <returns>returns false if string is null or empty</returns>
-            public static bool CheckString(string name)
+            try
             {
-                try
+                name = name.Trim();
+                if (string.IsNullOrEmpty(name))
                 {
-                    name = name.Trim();
-                    if (string.IsNullOrEmpty(name))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return true;
                 }
-                catch (Exception e)
+                else
                 {
-                    throw new Exception(e.Message);
+                    return false;
                 }
             }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
 
         /*****************************************************/
 

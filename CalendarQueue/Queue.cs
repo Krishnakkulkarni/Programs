@@ -14,6 +14,11 @@ namespace DataStructurePrograms.CalendarQueue
     public class Queue<T>
     {
         /// <summary>
+        /// The queue array
+        /// </summary>
+        private readonly T[] queueArray = new T[1000];
+
+        /// <summary>
         /// The queue maximum size
         /// </summary>
         private int queueMaxSize = 500;
@@ -27,11 +32,6 @@ namespace DataStructurePrograms.CalendarQueue
         /// The rear
         /// </summary>
         private int rear = -1;
-
-        /// <summary>
-        /// The queue array
-        /// </summary>
-        private T[] queueArray = new T[1000];
 
         /// <summary>
         /// The size/

@@ -67,6 +67,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="InventoryJson.json" />
+    <None Include="Stock\StockData.json" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

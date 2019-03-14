@@ -25,6 +25,6 @@ namespace ObjectOrientedPrograms
         /// <summary>
         /// The stock data
         /// </summary>
-        public readonly string StockData = "StockReport.json";
+        public readonly string StockData = "C:/Users/admin/source/repos/ObjectOrientedPrograms/ObjectOrientedPrograms/Stock/StockData.json";
     }
 }

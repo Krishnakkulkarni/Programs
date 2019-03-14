@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Mobile",
+    "Price": 250,
+    "Share": 15
+  },
+  {
+    "Name": "EarPhone",
+    "Price": 200,
+    "Share": 20
+  },
+  {
+    "Name": "Cable",
+    "Price": 150,
+    "Share": 25
+  }
+]

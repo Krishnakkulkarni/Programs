@@ -1,0 +1,38 @@
+{
+  "Rices": [
+    {
+      "name": "White",
+      "price": 2.0,
+      "weight": 3.0
+    },
+    {
+      "name": "Green",
+      "price": 45,
+      "weight": 25
+    }
+  ],
+  "Wheat": [
+    {
+      "name": "Thick",
+      "price": 35,
+      "weight": 10
+    },
+    {
+      "name": "Medium",
+      "price": 35,
+      "weight": 15
+    }
+  ],
+  "Pulses": [
+    {
+      "name": "Lentil",
+      "price": 35,
+      "weight": 15
+    },
+    {
+      "name": "Green",
+      "price": 60,
+      "weight": 25
+    }
+  ]
+}

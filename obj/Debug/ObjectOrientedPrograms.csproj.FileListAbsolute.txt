@@ -1,0 +1,11 @@
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\bin\Debug\ObjectOrientedPrograms.exe.config
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\bin\Debug\ObjectOrientedPrograms.exe
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\bin\Debug\ObjectOrientedPrograms.pdb
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\obj\Debug\ObjectOrientedPrograms.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\obj\Debug\ObjectOrientedPrograms.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\obj\Debug\ObjectOrientedPrograms.exe
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\obj\Debug\ObjectOrientedPrograms.pdb
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\admin\source\repos\ObjectOrientedPrograms\ObjectOrientedPrograms\obj\Debug\ObjectOrientedPrograms.csproj.CopyComplete

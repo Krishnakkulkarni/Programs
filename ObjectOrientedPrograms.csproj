@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="DeckOfCards\CardOfDecks.cs" />
+    <Compile Include="Cards.cs" />
+    <Compile Include="DeckOfQueue\DeckQueue.cs" />
     <Compile Include="InventoryDetails\Inventory.cs" />
     <Compile Include="InventoryDetails\InventoryDetails.cs" />
     <Compile Include="InventoryDetails\InventoryModel.cs" />

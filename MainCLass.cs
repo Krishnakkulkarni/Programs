@@ -6,6 +6,8 @@
 namespace ObjectOrientedPrograms
 {
     using System;
+    using ObjectOrientedPrograms.DeckOfCards;
+    using ObjectOrientedPrograms.DeckOfQueue;
     using ObjectOrientedPrograms.InventoryDetails;
     using ObjectOrientedPrograms.InventoryManager;
     using ObjectOrientedPrograms.RegularExpression;
@@ -31,7 +33,8 @@ namespace ObjectOrientedPrograms
                         Console.WriteLine("Enter 2 for regular expression");
                         Console.WriteLine("Enter 3 for Stock Report");
                         Console.WriteLine("Enter 4 for Inverntory manager");
-                       
+                        Console.WriteLine("Enter 5 for Decks OF Cards");
+                        Console.WriteLine("Enter 6 for Decks OF Cards in Queue");
                         Console.WriteLine("Enter yor choice!!!");
 
                         int choice = Convert.ToInt32(Console.ReadLine());
@@ -58,7 +61,17 @@ namespace ObjectOrientedPrograms
                                 inventoryManager.Manager();
                                 break;
 
-                            default:
+                            case 5:
+                            CardOfDecks cardOfDecks = new CardOfDecks();
+                            cardOfDecks.Deck();
+                                break;
+
+                            case 6:
+                                DeckQueue deckOfCards = new DeckQueue();
+                                deckOfCards.CardInQueue();
+                                break;
+
+                        default:
                                 Console.WriteLine("Select correct choice");
                                 break;
                         }

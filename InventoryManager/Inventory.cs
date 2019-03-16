@@ -22,10 +22,10 @@ namespace ObjectOrientedPrograms.InventoryManager
         {
             try
             {
-                Constants constants = new Constants();
+                CoreClass coreClass = new CoreClass();
 
                 //// Opens the file and reads it
-                using (StreamReader streamReader = File.OpenText(constants.InventoryData))
+                using (StreamReader streamReader = File.OpenText(coreClass.InventoryData))
                 {
                     string json = streamReader.ReadToEnd();
 

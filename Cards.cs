@@ -14,7 +14,7 @@ namespace ObjectOrientedPrograms.DeckOfCards
     public class Cards
     {
         /// <summary>
-        /// Cards the distribute.
+        /// Cards distribution.
         /// </summary>
         /// <returns>returns string</returns>
         public static string[,] CardDistribute()
@@ -46,7 +46,7 @@ namespace ObjectOrientedPrograms.DeckOfCards
         }
 
         /// <summary>
-        /// Cards the insert.
+        /// Cards to insert.
         /// </summary>
         /// <param name="arrayelements">The array elements.</param>
         public static void CardInsert(string[,] arrayelements)
@@ -73,7 +73,7 @@ namespace ObjectOrientedPrograms.DeckOfCards
         }
 
         /// <summary>
-        /// Cards the shuffle.
+        /// Cards to shuffle.
         /// </summary>
         /// <param name="arrayelements">The array elements.</param>
         public static void CardShuffle(string[,] arrayelements)
@@ -122,7 +122,7 @@ namespace ObjectOrientedPrograms.DeckOfCards
         }
 
         /// <summary>
-        /// Cards the sort.
+        /// Cards to sort.
         /// </summary>
         /// <param name="playercard">The player card.</param>
         /// <returns>RETURNS QUEUE</returns>

@@ -15,7 +15,7 @@ namespace ObjectOrientedPrograms.DeckOfQueue
     public class DeckQueue
     {
         /// <summary>
-        /// Cards the in queue.
+        /// Cards in queue.
         /// </summary>
         public void CardInQueue()
         {
@@ -27,7 +27,7 @@ namespace ObjectOrientedPrograms.DeckOfQueue
                 Queue<Queue<string>> sortedcard = Cards.CardSort(playercard);
 
                 //// Stores the list of players in player name
-                string[] playername = { "Player 1", "Player 2", "Player 3", "Player 4" };
+                string[] playername = { "Player 1 ", "Player 2 ", "Player 3 ", "Player 4 " };
                 int index = 0;
 
                 //// Loops over till the sortedcart is not 0

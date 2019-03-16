@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants.cs" />
+    <Compile Include="AddressBook\Address.cs" />
+    <Compile Include="AddressBook\BookModel.cs" />
+    <Compile Include="AddressBook\UtilityAddress.cs" />
+    <Compile Include="CoreClass.cs" />
     <Compile Include="DeckOfCards\CardOfDecks.cs" />
     <Compile Include="Cards.cs" />
     <Compile Include="DeckOfQueue\DeckQueue.cs" />
@@ -67,6 +70,7 @@
     <Compile Include="Stock\StockReportModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AddressBook\JsonAddress.json" />
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="InventoryJson.json" />

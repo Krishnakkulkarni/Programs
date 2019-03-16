@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Constants.cs" company="Bridgelabz">
+// <copyright file="CoreClass.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
@@ -10,7 +10,7 @@ namespace ObjectOrientedPrograms
     /// <summary>
     /// Class for constants
     /// </summary>
-    public class Constants
+    public class CoreClass
     {
         /// <summary>
         /// The inventory data
@@ -26,5 +26,10 @@ namespace ObjectOrientedPrograms
         /// The stock data
         /// </summary>
         public readonly string StockData = "C:/Users/admin/source/repos/ObjectOrientedPrograms/ObjectOrientedPrograms/Stock/StockData.json";
+
+        /// <summary>
+        /// The Address Book
+        /// </summary>
+        public readonly string AddressBookFile = "C:/Users/admin/source/repos/ObjectOrientedPrograms/ObjectOrientedPrograms/AddressBook/JsonAddress.json";
     }
 }

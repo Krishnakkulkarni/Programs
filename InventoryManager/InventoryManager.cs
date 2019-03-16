@@ -24,19 +24,19 @@ namespace ObjectOrientedPrograms.InventoryManager
         {
             try
             {
-                char char1 = 'n';
+                char character = 'n';
                 do
                 {
-                    Console.WriteLine("Enter 1 for adding  rice");
-                    Console.WriteLine("Enter 2 for adding wheat");
-                    Console.WriteLine("Enter 3 for adding pulses");
-                    Console.WriteLine("Enter 4 for deleting rice");
-                    Console.WriteLine("Enter 5 for deleting wheat");
-                    Console.WriteLine("Enter 6 for deleting pulses");
-                    Console.WriteLine("Enter 7 for Updating rice");
-                    Console.WriteLine("Enter 8 for Updating wheat");
-                    Console.WriteLine("Enter 9 for Updating pulses");
-                    Console.WriteLine("Enter 10 for viewing details");
+                    Console.WriteLine("1.  adding  rice");
+                    Console.WriteLine("2.  adding wheat");
+                    Console.WriteLine("3.  adding pulses");
+                    Console.WriteLine("4.  deleting rice");
+                    Console.WriteLine("5.  deleting wheat");
+                    Console.WriteLine("6.  deleting pulses");
+                    Console.WriteLine("7.  Updating rice");
+                    Console.WriteLine("8.  Updating wheat");
+                    Console.WriteLine("9.  Updating pulses");
+                    Console.WriteLine("10. viewing details");
 
                     int choice = Convert.ToInt32(Console.ReadLine());
                     switch (choice)
@@ -86,7 +86,7 @@ namespace ObjectOrientedPrograms.InventoryManager
                             break;
                     }
                 }
-                while (char1 != 'n');
+                while (character != 'n');
             }
             catch (Exception exception)
             {
@@ -101,7 +101,7 @@ namespace ObjectOrientedPrograms.InventoryManager
         {
             try
             {
-                Constants constants = new Constants();
+                CoreClass constants = new CoreClass();
 
                 //// Opens and reads data from json file
                 using (StreamReader streamReader = File.OpenText(constants.InventoryData))
@@ -168,10 +168,10 @@ namespace ObjectOrientedPrograms.InventoryManager
         {
             try
             {
-                Constants constants = new Constants();
+                CoreClass coreClass = new CoreClass();
 
                 //// Opens and reads data from json file
-                using (StreamReader streamReader = File.OpenText(constants.InventoryData))
+                using (StreamReader streamReader = File.OpenText(coreClass.InventoryData))
                 {
                     string json = streamReader.ReadToEnd();
 
@@ -195,7 +195,7 @@ namespace ObjectOrientedPrograms.InventoryManager
                     double price = Convert.ToDouble(Console.ReadLine());
                     if (Utility.IsNumber(price))
                     {
-                        Console.WriteLine("Enter the weight");
+                        Console.WriteLine("Enter weight");
                     }
 
                     double weight = Convert.ToDouble(Console.ReadLine());
@@ -218,7 +218,7 @@ namespace ObjectOrientedPrograms.InventoryManager
 
                         //// Serializing and writing data to the file
                         string output = JsonConvert.SerializeObject(list);
-                        File.WriteAllText(constants.InventoryDetails, output);
+                        File.WriteAllText(coreClass.InventoryDetails, output);
                     }
                 }
             }
@@ -235,10 +235,10 @@ namespace ObjectOrientedPrograms.InventoryManager
         {
             try
             {
-                Constants constants = new Constants();
+                CoreClass coreClass = new CoreClass();
 
                 //// Opens and reads data from json file
-                using (StreamReader streamReader = File.OpenText(constants.InventoryData))
+                using (StreamReader streamReader = File.OpenText(coreClass.InventoryData))
                 {
                     string json = streamReader.ReadToEnd();
 
@@ -285,7 +285,7 @@ namespace ObjectOrientedPrograms.InventoryManager
                         
                         //// Serializing and writing data to the file
                         string output = JsonConvert.SerializeObject(list);
-                        File.WriteAllText(constants.InventoryDetails, output);
+                        File.WriteAllText(coreClass.InventoryDetails, output);
                     }
                 }
             }
@@ -318,10 +318,10 @@ namespace ObjectOrientedPrograms.InventoryManager
         {
             try
             {
-                Constants constants = new Constants();
+                CoreClass coreClass = new CoreClass();
 
                 //// Used to read all data from the file
-                var json = File.ReadAllText(constants.InventoryData);
+                var json = File.ReadAllText(coreClass.InventoryData);
                 try
                 {
                     //// Parsing the object
@@ -345,7 +345,7 @@ namespace ObjectOrientedPrograms.InventoryManager
 
                         //// Serializing 
                         string output = JsonConvert.SerializeObject(jsonObject, Formatting.Indented);
-                        File.WriteAllText(constants.InventoryData, output);
+                        File.WriteAllText(coreClass.InventoryData, output);
                         Console.WriteLine(riceArray);
                     }
                     else
@@ -371,10 +371,10 @@ namespace ObjectOrientedPrograms.InventoryManager
         {
             try
             {
-                Constants constants = new Constants();
+                CoreClass coreClass = new CoreClass();
 
                 //// Used to read all data from the file
-                var json = File.ReadAllText(constants.InventoryData);
+                var json = File.ReadAllText(coreClass.InventoryData);
                 try
                 {
                     //// Parsing the object
@@ -398,7 +398,7 @@ namespace ObjectOrientedPrograms.InventoryManager
 
                         //// Serializing 
                         string output = JsonConvert.SerializeObject(jsonObject, Formatting.Indented);
-                        File.WriteAllText(constants.InventoryData, output);
+                        File.WriteAllText(coreClass.InventoryData, output);
                         Console.WriteLine(wheatArray);
                     }
                     else
@@ -424,10 +424,10 @@ namespace ObjectOrientedPrograms.InventoryManager
         {
             try
             {
-                Constants constants = new Constants();
+                CoreClass coreClass = new CoreClass();
 
                 //// Used to read all data from the file
-                var json = File.ReadAllText(constants.InventoryData);
+                var json = File.ReadAllText(coreClass.InventoryData);
                 try
                 {
                     //// Parsing the object
@@ -451,7 +451,7 @@ namespace ObjectOrientedPrograms.InventoryManager
 
                         //// Serializing 
                         string output = JsonConvert.SerializeObject(jsonObject, Formatting.Indented);
-                        File.WriteAllText(constants.InventoryData, output);
+                        File.WriteAllText(coreClass.InventoryData, output);
                         Console.WriteLine(pulseArray);
                     }
                     else
@@ -475,8 +475,8 @@ namespace ObjectOrientedPrograms.InventoryManager
         /// </summary>
         public void Update()
         {
-            Constants constants = new Constants();
-            string json = File.ReadAllText(constants.InventoryData);
+            CoreClass coreClass = new CoreClass();
+            string json = File.ReadAllText(coreClass.InventoryData);
 
             try
             {
@@ -526,7 +526,7 @@ namespace ObjectOrientedPrograms.InventoryManager
 
                     //// Performing serialization
                     string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObject, Newtonsoft.Json.Formatting.Indented);
-                    File.WriteAllText(constants.InventoryData, output);
+                    File.WriteAllText(coreClass.InventoryData, output);
                 }
                 else
                 {
@@ -546,8 +546,8 @@ namespace ObjectOrientedPrograms.InventoryManager
         /// </summary>
         public void UpdateWheat()
         {
-            Constants constants = new Constants();
-            string json = File.ReadAllText(constants.InventoryData);
+            CoreClass coreClass = new CoreClass();
+            string json = File.ReadAllText(coreClass.InventoryData);
 
             try
             {
@@ -584,7 +584,7 @@ namespace ObjectOrientedPrograms.InventoryManager
 
                     //// Performing serialization
                     string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObject, Newtonsoft.Json.Formatting.Indented);
-                    File.WriteAllText(constants.InventoryData, output);
+                    File.WriteAllText(coreClass.InventoryData, output);
                 }
                 else
                 {
@@ -604,8 +604,8 @@ namespace ObjectOrientedPrograms.InventoryManager
         /// </summary>
         public void UpdatePulses()
         {
-            Constants constants = new Constants();
-            string json = File.ReadAllText(constants.InventoryData);
+            CoreClass coreClass = new CoreClass();
+            string json = File.ReadAllText(coreClass.InventoryData);
 
             try
             {
@@ -642,7 +642,7 @@ namespace ObjectOrientedPrograms.InventoryManager
 
                     //// Performing serialization
                     string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObject, Newtonsoft.Json.Formatting.Indented);
-                    File.WriteAllText(constants.InventoryData, output);
+                    File.WriteAllText(coreClass.InventoryData, output);
                 }
                 else
                 {
@@ -664,10 +664,10 @@ namespace ObjectOrientedPrograms.InventoryManager
         {
             try
             {
-                Constants constants = new Constants();
+                CoreClass coreClass = new CoreClass();
 
                 //// Opens the file and reads it
-                using (StreamReader streamReader = File.OpenText(constants.InventoryData))
+                using (StreamReader streamReader = File.OpenText(coreClass.InventoryData))
                 {
                     string json = streamReader.ReadToEnd();
 

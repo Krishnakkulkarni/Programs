@@ -22,7 +22,7 @@ namespace ObjectOrientedPrograms.InventoryDetails
         {
             try
             {
-                Constants constants = new Constants();
+                CoreClass constants = new CoreClass();
 
                 //// Opens the file and reads it
                 using (StreamReader streamReader = File.OpenText(constants.InventoryData))

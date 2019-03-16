@@ -6,6 +6,7 @@
 namespace ObjectOrientedPrograms
 {
     using System;
+    using ObjectOrientedPrograms.AddressBook;
     using ObjectOrientedPrograms.DeckOfCards;
     using ObjectOrientedPrograms.DeckOfQueue;
     using ObjectOrientedPrograms.InventoryDetails;
@@ -19,7 +20,7 @@ namespace ObjectOrientedPrograms
     public class MainClass
     {
             /// <summary>
-            /// Defines the entry point of the application.
+            /// Defines the entry point of Main Class
             /// </summary>
             /// <param name="args">The arguments.</param>
             public static void Main(string[] args)
@@ -29,13 +30,14 @@ namespace ObjectOrientedPrograms
                     int option = 1;
                     do
                     {
-                        Console.WriteLine("Enter 1 for Inventory data");
-                        Console.WriteLine("Enter 2 for regular expression");
-                        Console.WriteLine("Enter 3 for Stock Report");
-                        Console.WriteLine("Enter 4 for Inverntory manager");
-                        Console.WriteLine("Enter 5 for Decks OF Cards");
-                        Console.WriteLine("Enter 6 for Decks OF Cards in Queue");
-                        Console.WriteLine("Enter yor choice!!!");
+                        Console.WriteLine("1. Inventory data");
+                        Console.WriteLine("2. Regular expression");
+                        Console.WriteLine("3. Stock Report");
+                        Console.WriteLine("4. Inverntory manager");
+                        Console.WriteLine("5. Decks OF Cards");
+                        Console.WriteLine("6. Decks OF Cards in Queue");
+                        Console.WriteLine("7. AddressBook");
+                        Console.WriteLine("Choose your option from above");
 
                         int choice = Convert.ToInt32(Console.ReadLine());
 
@@ -62,18 +64,23 @@ namespace ObjectOrientedPrograms
                                 break;
 
                             case 5:
-                            CardOfDecks cardOfDecks = new CardOfDecks();
-                            cardOfDecks.Deck();
-                                break;
+                                CardOfDecks cardOfDecks = new CardOfDecks();
+                                cardOfDecks.Deck();
+                                    break;
 
                             case 6:
                                 DeckQueue deckOfCards = new DeckQueue();
                                 deckOfCards.CardInQueue();
                                 break;
 
-                        default:
-                                Console.WriteLine("Select correct choice");
+                            case 7:
+                                Address address = new Address();
+                                address.BookDetails();
                                 break;
+
+                            default:
+                                    Console.WriteLine("Select correct choice");
+                                    break;
                         }
 
                     Console.WriteLine("Press 1 to continue or 0 to discontinue");

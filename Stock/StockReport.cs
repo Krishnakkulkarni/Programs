@@ -22,10 +22,10 @@ namespace ObjectOrientedPrograms.Stock
         {
             try
             {
-                Constants constants = new Constants();
+                CoreClass coreClass = new CoreClass();
 
                 //// Reading the file
-                using (StreamReader streamReader = File.OpenText(constants.StockData))
+                using (StreamReader streamReader = File.OpenText(coreClass.StockData))
                 {
                     string json = streamReader.ReadToEnd();
 
@@ -36,7 +36,7 @@ namespace ObjectOrientedPrograms.Stock
                     //// Loops over the list
                     foreach (var item in list)
                     {
-                        Console.WriteLine("{0} {1} {2}", item.Name, item.Price, item.Share + ":" + "Total Price of Company " + item.Name + " : " + (item.Price * item.Share));
+                        Console.WriteLine("{0} {1} {2}", item.Name, item.Price, item.Share + " : " + "Total Price of Company " + item.Name + " : " + (item.Price * item.Share));
                         sum += item.Price * item.Share;
                     }
 

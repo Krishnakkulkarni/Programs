@@ -5,7 +5,7 @@
 //-----------------------------------------------------------------------
 namespace AlgorithmPrograms
 {
-    using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +23,7 @@ using System.Threading.Tasks;
         {
             try
             {
-                string line System.IO.File.ReadAllText("C:/Users/admin/source/repos/ConsoleApp1/AlgorithmPrograms/Utilityclass.cs");
+                string line = System.IO.File.ReadAllText("C:/Users/admin/source/repos/ConsoleApp1/text.txt");
                 Console.WriteLine(line);
                 Console.WriteLine("Enter the word to search");
                 string key = Console.ReadLine();

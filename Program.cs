@@ -20,8 +20,8 @@ namespace AlgorithmPrograms
         {
             try
             {
-            int choose;
-            string yes;
+                int choose;
+                string yes, no;
             do
             {
                 Console.WriteLine(" 1.AnagramDetection \n 2.PrimeNumbers \n 3.AnagramPalindrom \n 4.SearchSort \n 5.FindYourOwnNumber \n 6.SearchWordFromFile ");
@@ -41,7 +41,7 @@ namespace AlgorithmPrograms
                         PrimeNumbers.NumbersOfPrime();
                         break;
                     case 3:
-                        AnagramPalindrom.PalindromAnagram();
+                        AnagramPalindrom.Palindrom();
                         break;
                     case 4:
                             SearchSort.Searchsort();
@@ -87,10 +87,11 @@ namespace AlgorithmPrograms
                         break;
                 }
 
-                    Console.WriteLine("do you want continue");
+                    Console.WriteLine("do you want continue(yes/no)");
                     yes = Console.ReadLine();
+                    no = Console.ReadLine();
                 }
-                while (choose != 0 && yes != "no");
+                while (choose != 0 && yes != no);
             }
             catch (Exception e)
             {

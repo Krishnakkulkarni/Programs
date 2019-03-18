@@ -5,11 +5,9 @@
 //-----------------------------------------------------------------------
 namespace AlgorithmPrograms
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     /// <summary>
     /// Core class
@@ -44,7 +42,7 @@ namespace AlgorithmPrograms
                 {
                     Console.WriteLine("No! Words \"{0}\" and \"{1}\" are not Anagrams", word1, word2);
                 }
-
+ 
                 //// Hold Console screen alive to view the results.  
                 Console.ReadLine();
             }
@@ -67,10 +65,13 @@ namespace AlgorithmPrograms
                 int k = 0;
                 for (int i = 1; i <= number; i++)
                 {
-                    if (number % i == 0)
+                    for (int j = 2; j < i-1; j++)
+                    {
+                    if ( i % j == 0)
                     {
                         k++;
                     }
+                }
                 }
 
                 if (k == 2)
@@ -100,10 +101,12 @@ namespace AlgorithmPrograms
         {
             try
             {   
+
+
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -855,6 +858,42 @@ namespace AlgorithmPrograms
             {
                 Console.WriteLine(binary[i]);
             }
+        }
+
+        /**************************************************/
+
+        /// <summary>
+        /// Determines whether the specified n is prime.
+        /// </summary>
+        /// <param name="n">The n.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified n is prime; otherwise, <c>false</c>.
+        /// </returns>
+        public static bool IsPrime(int n)
+        {
+            try
+            {
+                //// Checks if number is 0 or 1
+                if (n == 0 || n == 1)
+                {
+                    return false;
+                }
+
+                //// Loops over to find out the number is prime or not
+                for (int i = 2; i < n; i++)
+                {
+                    if (n % i == 0)
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return true;
         }
     }
 }

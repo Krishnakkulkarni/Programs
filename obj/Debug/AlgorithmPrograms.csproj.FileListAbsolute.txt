@@ -5,3 +5,7 @@ C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\obj\Debug\AlgorithmPro
 C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\obj\Debug\AlgorithmPrograms.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\obj\Debug\AlgorithmPrograms.exe
 C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\obj\Debug\AlgorithmPrograms.pdb
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\admin\source\repos\ConsoleApp1\AlgorithmPrograms\obj\Debug\AlgorithmPrograms.csproj.CopyComplete

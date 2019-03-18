@@ -8,79 +8,63 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
     using System;
 
     /// <summary>
-    /// Input for companyshares
+    /// Input for company shares
     /// </summary>
     public class CompanyShares
     {
         /// <summary>
-        /// 
+        /// Instance of number of shares
         /// </summary>
-        private long number_shares;
+        private long numberofshares;
 
         /// <summary>
-        /// 
+        /// Instance of price_shares
         /// </summary>
-        private double price_shares;
+        private double priceofshares;
 
         /// <summary>
-        /// 
+        /// Instance of symbol
         /// </summary>
         private string symbol;
 
         /// <summary>
-        /// 
+        /// Instance of date_time
         /// </summary>
-        private string date_time;
+        private string dateAndtime;
 
         /// <summary>
-        /// 
+        /// Instance of Company Shares
         /// </summary>
-        /// <param name="number_shares"></param>
-        /// <param name="price_shares"></param>
-        /// <param name="symbol"></param>
-        /// <param name="date_time"></param>
-        public CompanyShares(long number_shares, double price_shares, string symbol, string date_time)
+        /// <param name="numberofshares">numberofshares as a parameter</param>
+        /// <param name="priceofshares">priceofshares as a parameter</param>
+        /// <param name="symbol">symbol as a parameter</param>
+        /// <param name="dateAndtime">date_time as a parameter</param>
+        public CompanyShares(long numberofshares, double priceofshares, string symbol, string dateAndtime)
         {
-            this.number_shares = number_shares;
-            this.price_shares = price_shares;
-            this.symbol = symbol;
-            this.date_time = date_time;
+            this.Numberofshares = numberofshares;
+            this.Priceofshares = priceofshares;
+            this.Symbol = symbol;
+            this.dateAndtime = dateAndtime;
         }
 
         /// <summary>
-        /// 
+        /// Instance of Number of shares
         /// </summary>
-        public long Number_shares
-        {
-            get { return this.number_shares;  }
-            set { this.number_shares = value;  }
-        }
+        public long Numberofshares { get => this.numberofshares; set => this.numberofshares = value; }
 
         /// <summary>
-        /// 
+        /// Instance of Price of shares
         /// </summary>
-        public double Price_shares
-        {
-            get { return this.price_shares; }
-            set { this.price_shares = value; }
-        }
+        public double Priceofshares { get => this.priceofshares; set => this.priceofshares = value; }
 
         /// <summary>
-        /// 
+        /// Instance of symbol
         /// </summary>
-        public string Symbol
-        {
-            get { return this.symbol; }
-            set { this.symbol = value; }
-        }
+        public string Symbol { get => this.symbol; set => this.symbol = value; }
 
         /// <summary>
-        /// 
+        /// Instance of Date time
         /// </summary>
-        public string Date_time
-        {
-            get { return this.date_time; }
-            set { this.date_time = value; }
-        }
+        public string DateTime { get => this.dateAndtime; set => this.dateAndtime = value; }
     }
 }

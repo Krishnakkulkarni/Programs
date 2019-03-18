@@ -49,13 +49,18 @@
     <Compile Include="AddressBook\Address.cs" />
     <Compile Include="AddressBook\BookModel.cs" />
     <Compile Include="AddressBook\UtilityAddress.cs" />
+    <Compile Include="CommercialDataProcessing\Commercial.cs" />
     <Compile Include="CommercialDataProcessing\CommercialDataInput.cs" />
     <Compile Include="CommercialDataProcessing\CompanyShares.cs" />
-    <Compile Include="CommercialDataProcessing\Customer.cs" />
+    <Compile Include="CommercialDataProcessing\ILinkedList.cs" />
+    <Compile Include="CommercialDataProcessing\IStockAccount.cs" />
+    <Compile Include="CommercialDataProcessing\LinkedList.cs" />
     <Compile Include="CommercialDataProcessing\Node.cs" />
+    <Compile Include="CommercialDataProcessing\Queue.cs" />
     <Compile Include="CommercialDataProcessing\ReadWritefile.cs" />
+    <Compile Include="CommercialDataProcessing\Stack.cs" />
     <Compile Include="CommercialDataProcessing\StockAccount.cs" />
-    <Compile Include="CommercialDataProcessing\Transaction.cs" />
+    <Compile Include="CommercialDataProcessing\Utility.cs" />
     <Compile Include="CoreClass.cs" />
     <Compile Include="DeckOfCards\CardOfDecks.cs" />
     <Compile Include="Cards.cs" />
@@ -79,6 +84,8 @@
   <ItemGroup>
     <None Include="AddressBook\JsonAddress.json" />
     <None Include="App.config" />
+    <None Include="CommercialDataProcessing\CompanyShares.json" />
+    <None Include="CommercialDataProcessing\SymbolPurchased.json" />
     <None Include="packages.config" />
     <None Include="InventoryJson.json" />
     <None Include="Stock\StockData.json" />

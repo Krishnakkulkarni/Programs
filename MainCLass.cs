@@ -7,6 +7,7 @@ namespace ObjectOrientedPrograms
 {
     using System;
     using ObjectOrientedPrograms.AddressBook;
+    using ObjectOrientedPrograms.CommercialDataProcessing;
     using ObjectOrientedPrograms.DeckOfCards;
     using ObjectOrientedPrograms.DeckOfQueue;
     using ObjectOrientedPrograms.InventoryDetails;
@@ -37,6 +38,7 @@ namespace ObjectOrientedPrograms
                         Console.WriteLine("5. Decks OF Cards");
                         Console.WriteLine("6. Decks OF Cards in Queue");
                         Console.WriteLine("7. AddressBook");
+                        Console.WriteLine("8. Commercial Data Processing");
                         Console.WriteLine("Choose your option from above");
 
                         int choice = Convert.ToInt32(Console.ReadLine());
@@ -76,6 +78,11 @@ namespace ObjectOrientedPrograms
                             case 7:
                                 Address address = new Address();
                                 address.BookDetails();
+                                break;
+
+                            case 8:
+                                Commercial commercial = new Commercial();
+                                commercial.InitialiseShares();
                                 break;
 
                             default:

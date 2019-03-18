@@ -1,31 +1,102 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="CommercialData.cs" company="Bridgelabz">
+// <copyright file="CommercialDataInput.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name = "Krishna Kulkarni" />
 //-----------------------------------------------------------------------
 namespace ObjectOrientedPrograms.CommercialDataProcessing
 {
     using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
+    /// <summary>
+    /// Class for Commercial Data Input
+    /// </summary>
     public class CommercialDataInput
     {
-        public static void Input(int choose)
+        /// <summary>
+        /// Takes the user input.
+        /// </summary>
+        /// <param name="choosedOption">The choosed option.</param>
+        public static void TakeUserInput(int choosedOption)
         {
             StockAccount stockAccount = new StockAccount();
-            int number_shares = 0;
-            double price_shares = 0;
+            int numberOfShares = 0;
+            double priceOfShare = 0;
             string symbol = string.Empty;
-            string data_time = string.Empty;
+            string datetime = string.Empty;
 
-            if(choose == 1)
+            if (choosedOption == 1)
             {
-                while(true)
+                while (true)
                 {
+                    Console.WriteLine("Enter the Number of shares");
+                    string stringNumberOfShares = Console.ReadLine();
 
+                    if (Utility.IsNumber(stringNumberOfShares) == false)
+                    {
+                        Console.WriteLine("Invalid input");
+                        continue;
+                    }
+
+                    numberOfShares = Convert.ToInt32(stringNumberOfShares);
+                    break;
+                }
+
+                while (true)
+                {
+                    Console.WriteLine("Enter the Price Of Share");
+                    string stringpriceOfShare = Console.ReadLine();
+
+                    if (Utility.IsNumber(stringpriceOfShare) == false)
+                    {
+                        Console.WriteLine("Invalid input");
+                        continue;
+                    }
+
+                    priceOfShare = Convert.ToInt32(stringpriceOfShare);
+                    break;
+                }
+
+                while (true)
+                {
+                    Console.WriteLine("Enter the Stock Symbol");
+                    string stringSymbol = Console.ReadLine();
+
+                    if (Utility.CheckString(stringSymbol))
+                    {
+                        Console.WriteLine("Stock Symbol cant be empty");
+                        continue;
+                    }
+
+                    if (Utility.ContainsCharacter(stringSymbol))
+                    {
+                        Console.WriteLine("No characters allowed");
+                        continue;
+                    }
+
+                    symbol = stringSymbol;
+                    break;
+                }
+
+                stockAccount.Buy(numberOfShares, priceOfShare, symbol);
+            }
+
+            if (choosedOption == 2)
+            {
+                while (true)
+                {
+                    Console.WriteLine("Enter the Stock Symbol of the share you want to sell");
+                    string stringSymbol = Console.ReadLine();
+
+                    if (Utility.CheckString(stringSymbol))
+                    {
+                        Console.WriteLine("Stock Symbol cant be empty");
+                        continue;
+                    }
+
+                    symbol = stringSymbol;
+
+                    stockAccount.Sell(symbol);
+                    break;
                 }
             }
         }

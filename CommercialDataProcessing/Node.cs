@@ -6,37 +6,33 @@
 namespace ObjectOrientedPrograms.CommercialDataProcessing
 {
     using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
     /// <summary>
-    /// 
+    /// Class for Linked List
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Generic type T</typeparam>
     public class Node<T>
     {
         /// <summary>
-        /// 
+        /// Instance of Node
         /// </summary>
         private Node<T> next;
 
         /// <summary>
-        /// 
+        /// Instance of data
         /// </summary>
         private T data;
 
         /// <summary>
-        /// 
+        /// Instance of position
         /// </summary>
         private long position;
 
         /// <summary>
-        /// 
+        /// Instance of Node
         /// </summary>
-        /// <param name="data"></param>
-        /// <param name="position"></param>
+        /// <param name="data">data as a parameter</param>
+        /// <param name="position">position as a parameter</param>
         public Node(T data, long position)
         {
             this.data = data;
@@ -44,7 +40,7 @@ using System.Threading.Tasks;
         }
 
         /// <summary>
-        /// 
+        /// Instance of Next
         /// </summary>
         public Node<T> Next
         {
@@ -53,7 +49,7 @@ using System.Threading.Tasks;
         }
 
         /// <summary>
-        /// 
+        /// Instance of Position
         /// </summary>
         public long Position
         {
@@ -62,7 +58,7 @@ using System.Threading.Tasks;
         }
 
         /// <summary>
-        /// 
+        /// Instance of Data
         /// </summary>
         public T Data
         {

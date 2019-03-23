@@ -1,0 +1,7 @@
+C:\Users\admin\source\repos\DesigenPattern\DesigenPattern\bin\Debug\DesigenPattern.exe.config
+C:\Users\admin\source\repos\DesigenPattern\DesigenPattern\bin\Debug\DesigenPattern.exe
+C:\Users\admin\source\repos\DesigenPattern\DesigenPattern\bin\Debug\DesigenPattern.pdb
+C:\Users\admin\source\repos\DesigenPattern\DesigenPattern\obj\Debug\DesignPattern.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\DesigenPattern\DesigenPattern\obj\Debug\DesignPattern.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\DesigenPattern\DesigenPattern\obj\Debug\DesigenPattern.exe
+C:\Users\admin\source\repos\DesigenPattern\DesigenPattern\obj\Debug\DesigenPattern.pdb

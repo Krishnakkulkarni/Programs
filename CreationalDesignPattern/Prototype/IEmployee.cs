@@ -1,10 +1,10 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="IEmployee.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
-// <creator name="Krishna Kulkarni"/>
+// <creator name="Krishna kulkarni"/>
 //-----------------------------------------------------------------------
 
-namespace DesignPatternProgram.CreationalDesignPattern.Prototype
+namespace DesignPattern.CreationalDesignPattern.Prototype
 {
     using System;
 
@@ -16,13 +16,13 @@ namespace DesignPatternProgram.CreationalDesignPattern.Prototype
         /// <summary>
         /// Clones this instance.
         /// </summary>
-        /// <returns>return interface</returns>
+        /// <returns>returns interface</returns>
         IEmployee Clone();
 
         /// <summary>
         /// Gets the details.
         /// </summary>
-        /// <returns>return string</returns>
+        /// <returns>returns string</returns>
         string GetDetails();
     }
 }

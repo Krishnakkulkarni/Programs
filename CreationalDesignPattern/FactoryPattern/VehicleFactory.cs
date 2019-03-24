@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IFactory.cs" company="Bridgelabz">
+// <copyright file="VehicleFactory.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name="Krishna kulkarni"/>
 //-----------------------------------------------------------------------
@@ -9,14 +9,15 @@ namespace DesignPattern.CreationalDesignPattern.FactoryPattern
     using System;
 
     /// <summary>
-    /// IFactory interface
+    /// The Vehicle factory abstract class
     /// </summary>
-    public interface IFactory
+    public abstract class VehicleFactory
     {
         /// <summary>
-        /// Drives the specified miles.
+        /// Gets the vehicle.
         /// </summary>
-        /// <param name="miles">The miles.</param>
-        void Drive(int miles);
+        /// <param name="vehicle">The vehicle.</param>
+        /// <returns>returns vehicle</returns>
+        public abstract IFactory GetVehicle(string vehicle);
     }
 }

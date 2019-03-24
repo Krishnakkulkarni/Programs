@@ -33,10 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DesignPatternProgram.CreationalDesignPattern.PrototypePattern.MainClass</StartupObject>
+    <StartupObject>DesignPattern.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,15 +47,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Annotation\AnnotationDemo.cs" />
+    <Compile Include="Annotation\Customer.cs" />
+    <Compile Include="BehavioralDesignPattern\Mediator\Colleague.cs" />
+    <Compile Include="BehavioralDesignPattern\Mediator\ConcreteColleague1.cs" />
+    <Compile Include="BehavioralDesignPattern\Mediator\ConcreteColleague2.cs" />
+    <Compile Include="BehavioralDesignPattern\Mediator\ConcreteMediator.cs" />
+    <Compile Include="BehavioralDesignPattern\Mediator\MainMediator.cs" />
+    <Compile Include="BehavioralDesignPattern\Mediator\Mediator.cs" />
+    <Compile Include="BehavioralDesignPattern\Observer\ConcreteObserver.cs" />
+    <Compile Include="BehavioralDesignPattern\Observer\ConcreteSubject.cs" />
+    <Compile Include="BehavioralDesignPattern\Observer\MainObserver.cs" />
+    <Compile Include="BehavioralDesignPattern\Observer\Observer.cs" />
+    <Compile Include="BehavioralDesignPattern\Observer\Subject.cs" />
+    <Compile Include="BehavioralDesignPattern\VisitorPattern\ConcreteElementA.cs" />
+    <Compile Include="BehavioralDesignPattern\VisitorPattern\ConcreteElementB.cs" />
+    <Compile Include="BehavioralDesignPattern\VisitorPattern\ConcreteVisitor1.cs" />
+    <Compile Include="BehavioralDesignPattern\VisitorPattern\ConcreteVisitor2.cs" />
+    <Compile Include="BehavioralDesignPattern\VisitorPattern\Element.cs" />
+    <Compile Include="BehavioralDesignPattern\VisitorPattern\MainVisitor.cs" />
+    <Compile Include="BehavioralDesignPattern\VisitorPattern\ObjectStructure.cs" />
+    <Compile Include="BehavioralDesignPattern\VisitorPattern\Visitor.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryPattern\Bike.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryPattern\ConcreteVehicle.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryPattern\FactoryDemo.cs" />
     <Compile Include="CreationalDesignPattern\FactoryPattern\IFactory.cs" />
-    <Compile Include="CreationalDesignPattern\FactoryPattern\MainClass.cs" />
-    <Compile Include="CreationalDesignPattern\PrototypePattern\Developer.cs" />
-    <Compile Include="CreationalDesignPattern\PrototypePattern\IEmployee.cs" />
-    <Compile Include="CreationalDesignPattern\PrototypePattern\MainClass.cs" />
-    <Compile Include="CreationalDesignPattern\PrototypePattern\Devops.cs" />
-    <Compile Include="CreationalDesignPattern\SingletonPattern\Singleton.cs" />
-    <Compile Include="CreationalDesignPattern\SingletonPattern\Program.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryPattern\Scooter.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryPattern\VehicleFactory.cs" />
+    <Compile Include="CreationalDesignPattern\Prototype\Developer.cs" />
+    <Compile Include="CreationalDesignPattern\Prototype\IEmployee.cs" />
+    <Compile Include="CreationalDesignPattern\Prototype\PrototypeClass.cs" />
+    <Compile Include="CreationalDesignPattern\Prototype\Typist.cs" />
+    <Compile Include="CreationalDesignPattern\SingletonLink\SingletonClass.cs" />
+    <Compile Include="CreationalDesignPattern\SingletonLink\SingletonDemo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Delegates\DelegateEx.cs" />
+    <Compile Include="Delegates\Employee.cs" />
+    <Compile Include="DependencyInjection\ConstructorInjection.cs" />
+    <Compile Include="DependencyInjection\Format.cs" />
+    <Compile Include="DependencyInjection\IText.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\Customer.cs" />
+    <Compile Include="StructuralDesignPattern\Adapter\AdapterClass.cs" />
+    <Compile Include="StructuralDesignPattern\Adapter\CollegeSystem.cs" />
+    <Compile Include="StructuralDesignPattern\Adapter\ITarget.cs" />
+    <Compile Include="StructuralDesignPattern\Adapter\Student.cs" />
+    <Compile Include="StructuralDesignPattern\Adapter\StudentAdapter.cs" />
+    <Compile Include="StructuralDesignPattern\Facade\CarAccessories.cs" />
+    <Compile Include="StructuralDesignPattern\Facade\CarBody.cs" />
+    <Compile Include="StructuralDesignPattern\Facade\CarEngine.cs" />
+    <Compile Include="StructuralDesignPattern\Facade\CarFacade.cs" />
+    <Compile Include="StructuralDesignPattern\Facade\CarModel.cs" />
+    <Compile Include="StructuralDesignPattern\Facade\FacadeClass.cs" />
+    <Compile Include="StructuralDesignPattern\Proxy\IClient.cs" />
+    <Compile Include="StructuralDesignPattern\Proxy\ProxyClass.cs" />
+    <Compile Include="StructuralDesignPattern\Proxy\ProxyClient.cs" />
+    <Compile Include="StructuralDesignPattern\Proxy\RealClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

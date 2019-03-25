@@ -18,7 +18,14 @@ namespace DesignPattern.StructuralDesignPattern.Facade
         /// </summary>
         public void SetBody()
         {
-            Console.WriteLine(" CarBody - SetBody");
+            try
+            {
+                Console.WriteLine(" CarBody - SetBody");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

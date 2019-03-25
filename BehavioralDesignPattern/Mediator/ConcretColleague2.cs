@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ConcreteColleague1.cs" company="Bridgelabz">
+// <copyright file="ConcretColleague2.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name="Krishna Kulkarni"/>
 //-----------------------------------------------------------------------
@@ -9,16 +9,17 @@ namespace DesignPattern.BehavioralDesignPattern.Mediator
     using System;
 
     /// <summary>
-    /// Class for concreate colleague
+    /// class Concrete Colleague2
     /// </summary>
     /// <seealso cref="DesignPattern.Mediator_Design_Pattern.Colleague" />
-    public class ConcreteColleague1 : Colleague
+    public class ConcretColleague2 : Colleague
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConcreteColleague1"/> class.
+        /// Initializes a new instance of the <see cref="ConcretColleague2"/> class.
         /// </summary>
         /// <param name="mediator">The mediator.</param>
-        public ConcreteColleague1(Mediator mediator) : base(mediator)
+        public ConcretColleague2(Mediator mediator)
+          : base(mediator)
         {
         }
 
@@ -30,11 +31,11 @@ namespace DesignPattern.BehavioralDesignPattern.Mediator
         {
             try
             {
-                mediator.Send(message, this);
+            Mediator.Send(message, this);
             }
-            catch (Exception exception)
+            catch (Exception e)
             {
-                Console.WriteLine(exception.Message);
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -46,7 +47,7 @@ namespace DesignPattern.BehavioralDesignPattern.Mediator
         {
             try
             {
-                Console.WriteLine("Colleague1 gets message: " + message);
+                Console.WriteLine("Colleague2 gets message: " + message);
             }
             catch (Exception exception)
             {

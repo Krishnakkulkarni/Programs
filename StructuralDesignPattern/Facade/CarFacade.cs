@@ -13,20 +13,35 @@ namespace DesignPattern.StructuralDesignPattern.Facade
     /// </summary>
     public class CarFacade
     {
-        CarModel model;
-        CarEngine engine;
-        CarBody body;
-        CarAccessories accessories;
+        /// <summary>
+        /// Instance of model
+        /// </summary>
+        private readonly CarModel model;
+
+        /// <summary>
+        /// Instance of engine
+        /// </summary>
+        private readonly CarEngine engine;
+
+        /// <summary>
+        /// Instance of body
+        /// </summary>
+        private readonly CarBody body;
+
+        /// <summary>
+        /// Instance of accessories
+        /// </summary>
+        private readonly CarAccessories accessories;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CarFacade"/> class.
         /// </summary>
         public CarFacade()
         {
-            model = new CarModel();
-            engine = new CarEngine();
-            body = new CarBody();
-            accessories = new CarAccessories();
+            this.model = new CarModel();
+            this.engine = new CarEngine();
+            this.body = new CarBody();
+            this.accessories = new CarAccessories();
         }
 
         /// <summary>
@@ -34,13 +49,19 @@ namespace DesignPattern.StructuralDesignPattern.Facade
         /// </summary>
         public void CreateCompleteCar()
         {
-            Console.WriteLine("******** Creating a Car **********\n");
-            model.SetModel();
-            engine.SetEngine();
-            body.SetBody();
-            accessories.SetAccessories();
-
-            Console.WriteLine("\n******** Car creation complete **********");
+            try
+            {
+                Console.WriteLine("Creating a Car \n");
+                this.model.SetModel();
+                this.engine.SetEngine();
+                this.body.SetBody();
+                this.accessories.SetAccessories();
+                Console.WriteLine("\n Car creation complete :");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

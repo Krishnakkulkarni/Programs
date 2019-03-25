@@ -11,18 +11,25 @@ namespace DesignPattern.StructuralDesignPattern.Facade
     /// <summary>
     /// Entry point
     /// </summary>
-    class FacadeClass
+    public class FacadeClass
     {
         /// <summary>
         /// Facades this instance.
         /// </summary>
         public static void Facade()
         {
-            CarFacade facade = new CarFacade();
+            try
+            {
+                CarFacade facade = new CarFacade();
 
-            facade.CreateCompleteCar();
+                facade.CreateCompleteCar();
 
-            Console.ReadKey();
+                Console.ReadKey();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

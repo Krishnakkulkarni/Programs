@@ -18,7 +18,7 @@ namespace DesignPattern.BehavioralDesignPattern.Observer
         /// <summary>
         /// The observers
         /// </summary>
-        private List<Observer> observers = new List<Observer>();
+        private readonly List<Observer> observers = new List<Observer>();
 
         /// <summary>
         /// Attaches the specified observer.

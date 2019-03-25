@@ -18,11 +18,17 @@ namespace DesignPattern.StructuralDesignPattern.Adapter
         /// </summary>
         public static void Adapter()
         {
-            ITarget Itarget = new StudentAdapter();
-            Student client = new Student(Itarget);
-            client.ShowStudentList();
-
-            Console.ReadKey();
+            try
+            {
+                ITarget itarget = new StudentAdapter();
+                Student client = new Student(itarget);
+                client.ShowStudentList();
+                Console.ReadKey();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

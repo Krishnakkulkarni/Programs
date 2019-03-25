@@ -46,39 +46,46 @@ namespace Implementations
         /// </summary>
         public static void Main()
         {
-            ////getting all metadata using static method
-            Type type = Type.GetType("Implementations.Customer");
-            ////printing fully qualified name
-            Console.WriteLine("Full Name: " + type.FullName);
-            ////printing name of class
-            Console.WriteLine("Name: " + type.Name);
-            ////printing namespace
-            Console.WriteLine("Namespace: " + type.Namespace);
-            Console.WriteLine();
-            ////getting all properties
-            Console.WriteLine("Properties: ");
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
+            try
             {
-                Console.WriteLine(property.PropertyType.Name + " " + property.Name);
-            }
+                ////getting all metadata using static method
+                Type type = Type.GetType("Implementations.Customer");
+                ////printing fully qualified name
+                Console.WriteLine("Full Name: " + type.FullName);
+                ////printing name of class
+                Console.WriteLine("Name: " + type.Name);
+                ////printing namespace
+                Console.WriteLine("Namespace: " + type.Namespace);
+                Console.WriteLine();
+                ////getting all properties
+                Console.WriteLine("Properties: ");
+                PropertyInfo[] properties = type.GetProperties();
+                foreach (PropertyInfo property in properties)
+                {
+                    Console.WriteLine(property.PropertyType.Name + " " + property.Name);
+                }
 
-            Console.WriteLine();
-            ////getting all methods
-            Console.WriteLine("Methods: ");
-            MethodInfo[] methods = type.GetMethods();
-            foreach (MethodInfo method in methods)
-            {
-                Console.WriteLine(method.ReturnType.Name + " " + method.Name);
-            }
+                Console.WriteLine();
+                ////getting all methods
+                Console.WriteLine("Methods: ");
+                MethodInfo[] methods = type.GetMethods();
+                foreach (MethodInfo method in methods)
+                {
+                    Console.WriteLine(method.ReturnType.Name + " " + method.Name);
+                }
 
-            Console.WriteLine();
-            ////getting all constuctors
-            Console.WriteLine("Constructors: ");
-            ConstructorInfo[] constructors = type.GetConstructors();
-            foreach (ConstructorInfo constructor in constructors)
+                Console.WriteLine();
+                ////getting all constuctors
+                Console.WriteLine("Constructors: ");
+                ConstructorInfo[] constructors = type.GetConstructors();
+                foreach (ConstructorInfo constructor in constructors)
+                {
+                    Console.WriteLine(constructor.ToString());
+                }
+            }
+            catch (Exception e)
             {
-                Console.WriteLine(constructor.ToString());
+                Console.WriteLine(e.Message);
             }
         }
     }

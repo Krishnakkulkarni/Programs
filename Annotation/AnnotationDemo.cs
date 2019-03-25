@@ -23,10 +23,12 @@ namespace DesignPattern.Annotation
             try
             {
                 //// Object created
-                Customer customer = new Customer();
-                customer.Id = 12;
-                customer.Name = "Krishna";
-                customer.Address = "Kalburgi-585103";
+                Customer customer = new Customer
+                {
+                    Id = 12,
+                    Name = "Krishna",
+                    Address = "Kalburgi-585103"
+                };
 
                 //// Context 
                 var context = new ValidationContext(customer, null, null);

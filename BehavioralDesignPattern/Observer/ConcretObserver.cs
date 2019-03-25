@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ConcreteObserver.cs" company="Bridgelabz">
+// <copyright file="ConcretObserver.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name="Krishna Kulkarni"/>
 //-----------------------------------------------------------------------
@@ -7,16 +7,17 @@
 namespace DesignPattern.BehavioralDesignPattern.Observer
 {
     using System;
+
     /// <summary>
-    /// Class for concreate observer
+    /// Class for concret observer
     /// </summary>
     /// <seealso cref="DesignPattern.Observer_Design_Pattern.Observer" />
-    public class ConcreteObserver : Observer
+    public class ConcretObserver : Observer
     {
         /// <summary>
         /// The name
         /// </summary>
-        private string name;
+        private readonly string name;
 
         /// <summary>
         /// The observer state
@@ -26,14 +27,14 @@ namespace DesignPattern.BehavioralDesignPattern.Observer
         /// <summary>
         /// The subject
         /// </summary>
-        private ConcreteSubject subject;
+        private ConcretSubject subject;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConcreteObserver"/> class.
+        /// Initializes a new instance of the <see cref="ConcretObserver"/> class.
         /// </summary>
         /// <param name="subject">The subject.</param>
         /// <param name="name">The name.</param>
-        public ConcreteObserver(ConcreteSubject subject, string name)
+        public ConcretObserver(ConcretSubject subject, string name)
         {
             this.subject = subject;
             this.name = name;
@@ -45,7 +46,7 @@ namespace DesignPattern.BehavioralDesignPattern.Observer
         /// <value>
         /// The subject.
         /// </value>
-        public ConcreteSubject Subject
+        public ConcretSubject Subject
         {
             get { return this.subject; }
             set { this.subject = value; }

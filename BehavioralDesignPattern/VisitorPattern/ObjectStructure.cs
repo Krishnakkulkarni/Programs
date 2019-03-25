@@ -17,7 +17,7 @@ namespace DesignPattern.BehavioralDesignPattern.VisitorPattern
         /// <summary>
         /// The elements
         /// </summary>
-        private List<Element> elements = new List<Element>();
+        private readonly List<Element> elements = new List<Element>();
 
         /// <summary>
         /// Attaches the specified element.

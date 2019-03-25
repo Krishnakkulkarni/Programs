@@ -21,11 +21,11 @@ namespace DesignPattern.BehavioralDesignPattern.Observer
             try
             {
                 //// Configure Observer pattern
-                ConcreteSubject subject = new ConcreteSubject();
+                ConcretSubject subject = new ConcretSubject();
 
-                subject.Attach(new ConcreteObserver(subject, "X"));
-                subject.Attach(new ConcreteObserver(subject, "Y"));
-                subject.Attach(new ConcreteObserver(subject, "Z"));
+                subject.Attach(new ConcretObserver(subject, "X"));
+                subject.Attach(new ConcretObserver(subject, "Y"));
+                subject.Attach(new ConcretObserver(subject, "Z"));
 
                 //// Change subject and notify observers
                 subject.SubjectState = "ABC";

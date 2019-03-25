@@ -19,7 +19,14 @@ namespace DesignPattern.CreationalDesignPattern.FactoryPattern
         /// <param name="miles">The miles.</param>
         public void Drive(int miles)
         {
-            Console.WriteLine("Drive the Scooter : " + miles.ToString() + "km");
+            try
+            {
+                Console.WriteLine("Drive the Scooter : " + miles.ToString() + "km");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

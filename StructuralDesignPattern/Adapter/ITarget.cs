@@ -17,7 +17,7 @@ namespace DesignPattern.StructuralDesignPattern.Adapter
         /// <summary>
         /// Gets the employee list.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>returns list of string</returns>
         List<string> GetStudentList();
     }
 }

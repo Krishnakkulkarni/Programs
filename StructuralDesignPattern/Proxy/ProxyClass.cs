@@ -18,10 +18,16 @@ namespace DesignPattern.StructuralDesignPattern.Proxy
         /// </summary>
         public static void Proxy()
         {
-            ProxyClient proxy = new ProxyClient();
-            Console.WriteLine("Data from Proxy Client = {0}", proxy.GetData());
-
-            Console.ReadKey();
+            try
+            {
+                ProxyClient proxy = new ProxyClient();
+                Console.WriteLine("Data from Proxy Client = {0}", proxy.GetData());
+                Console.ReadKey();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

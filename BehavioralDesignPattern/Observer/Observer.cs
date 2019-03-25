@@ -4,7 +4,6 @@
 // <creator name="Krishna Kulkarni"/>
 //-----------------------------------------------------------------------
 
-
 namespace DesignPattern.BehavioralDesignPattern.Observer
 {
     using System;

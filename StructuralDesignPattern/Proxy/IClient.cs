@@ -16,7 +16,7 @@ namespace DesignPattern.StructuralDesignPattern.Proxy
         /// <summary>
         /// Gets the data.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>returns list of string</returns>
         string GetData();
     }
 }

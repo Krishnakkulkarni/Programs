@@ -18,7 +18,14 @@ namespace DesignPattern.StructuralDesignPattern.Facade
         /// </summary>
         public void SetEngine()
         {
-            Console.WriteLine(" CarEngine - SetEngine");
+            try
+            {
+                Console.WriteLine(" CarEngine - SetEngine");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

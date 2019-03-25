@@ -21,11 +21,11 @@ namespace DesignPattern.BehavioralDesignPattern.Mediator
             try
             {
                 //// Creating mediator object
-                ConcreteMediator mediator = new ConcreteMediator();
+                ConcretMediator mediator = new ConcretMediator();
 
                 //// Creating classes and passing the mediator reference
-                ConcreteColleague1 colleague1 = new ConcreteColleague1(mediator);
-                ConcreteColleague2 colleague2 = new ConcreteColleague2(mediator);
+                ConcretColleague1 colleague1 = new ConcretColleague1(mediator);
+                ConcretColleague2 colleague2 = new ConcretColleague2(mediator);
 
                 mediator.Colleague1 = colleague1;
                 mediator.Colleague2 = colleague2;

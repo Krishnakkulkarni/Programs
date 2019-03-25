@@ -17,7 +17,7 @@ namespace DesignPattern.StructuralDesignPattern.Adapter
         /// <summary>
         /// The employee source
         /// </summary>
-        private ITarget StudentSource;
+        private readonly ITarget studentSource;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Student"/> class.
@@ -25,7 +25,7 @@ namespace DesignPattern.StructuralDesignPattern.Adapter
         /// <param name="employeeSource">The employee source.</param>
         public Student(ITarget employeeSource)
         {
-            this.StudentSource = employeeSource;
+            this.studentSource = employeeSource;
         }
 
         /// <summary>
@@ -33,9 +33,9 @@ namespace DesignPattern.StructuralDesignPattern.Adapter
         /// </summary>
         public void ShowStudentList()
         {
-            List<string> employee = StudentSource.GetStudentList();
+            List<string> employee = this.studentSource.GetStudentList();
 
-            Console.WriteLine("*********** Student List ***********");
+            Console.WriteLine("Student List :");
             foreach (var item in employee)
             {
                 Console.Write(item);

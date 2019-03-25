@@ -21,7 +21,14 @@ namespace Implementations
         /// </summary>
         public void Print()
         {
+            try
+            {
             Console.WriteLine(" here is text format");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

@@ -11,14 +11,21 @@ namespace DesignPattern.StructuralDesignPattern.Facade
     /// <summary>
     /// The 'Subsystem ClassD' class
     /// </summary>
-    class CarAccessories
+    public class CarAccessories
     {
         /// <summary>
         /// Sets the accessories.
         /// </summary>
         public void SetAccessories()
         {
-            Console.WriteLine(" CarAccessories - SetAccessories");
+            try
+            {
+                Console.WriteLine(" CarAccessories - SetAccessories");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

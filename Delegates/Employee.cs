@@ -14,7 +14,7 @@ namespace Implementations
     /// creating delegate
     /// </summary>
     /// <param name="employee">The employee.</param>
-    /// <returns>bool value</returns>
+    /// <returns>boolean value</returns>
     public delegate bool IsPromotable(Employee employee);
 
     /// <summary>

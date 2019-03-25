@@ -18,12 +18,19 @@ namespace DesignPattern.CreationalDesignPattern.FactoryPattern
         /// </summary>
         public static void FactoryMain()
         {
-            VehicleFactory vehical = new ConcreteVehicle();
-            IFactory scooter = vehical.GetVehicle("Scooter");
-            scooter.Drive(10);
-            IFactory bike = vehical.GetVehicle("Bike");
-            bike.Drive(20);
-            Console.ReadKey();
+            try
+            {
+                VehicleFactory vehical = new ConcreteVehicle();
+                IFactory scooter = vehical.GetVehicle("Scooter");
+                scooter.Drive(10);
+                IFactory bike = vehical.GetVehicle("Bike");
+                bike.Drive(20);
+                Console.ReadKey();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ namespace DesignPattern.BehavioralDesignPattern.Mediator
         /// <summary>
         /// The mediator
         /// </summary>
-        protected Mediator mediator;
+        protected readonly Mediator Mediator;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Colleague"/> class.
@@ -24,7 +24,14 @@ namespace DesignPattern.BehavioralDesignPattern.Mediator
         /// <param name="mediator">The mediator.</param>
         public Colleague(Mediator mediator)
         {
-            this.mediator = mediator;
+            try
+            {
+                this.Mediator = mediator;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

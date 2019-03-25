@@ -14,14 +14,18 @@ namespace DesignPattern.StructuralDesignPattern.Proxy
     /// <seealso cref="DesignPatternProgram.StructuralDesignPattern.Proxy.IClient" />
     public class RealClient : IClient
     {
-        string Data;
+        /// <summary>
+        /// Instance of data
+        /// </summary>
+        private string data;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RealClient"/> class.
         /// </summary>
         public RealClient()
         {
             Console.WriteLine("Real Client: Initialized");
-            Data1 = "Local Machine";
+            this.Data1 = "Local Machine";
         }
 
         /// <summary>
@@ -30,15 +34,22 @@ namespace DesignPattern.StructuralDesignPattern.Proxy
         /// <value>
         /// The data1.
         /// </value>
-        public string Data1 { get => Data; set => Data = value; }
+        public string Data1 { get => this.data; set => this.data = value; }
 
         /// <summary>
         /// Gets the data.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>returns list of string</returns>
         public string GetData()
         {
-            return Data1;
+            try
+            {
+                return this.Data1;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }

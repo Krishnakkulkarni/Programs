@@ -15,16 +15,22 @@ namespace DesignPattern.CreationalDesignPattern.SingletonLink
     public class SingletonClass
     {
         /// <summary>
-        /// defines entry point
+        /// Method to call main class
         /// </summary>
-        /// <param name="args">string argument</param>
         public static void SingletonMain()
         {
-            Singleton student1 = Singleton.GetInstance;
-            student1.PrintDetails("1st Student");
+            try
+            {
+                Singleton student1 = Singleton.GetInstance;
+                student1.PrintDetails("1st Student");
 
-            Singleton student2 = Singleton.GetInstance;
-            student1.PrintDetails("2nd Student");
+                Singleton student2 = Singleton.GetInstance;
+                student1.PrintDetails("2nd Student");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

@@ -13,7 +13,11 @@ namespace DesignPattern.StructuralDesignPattern.Proxy
     /// </summary>
     public class ProxyClient : IClient
     {
-        RealClient client = new RealClient();
+        /// <summary>
+        /// Instance of RealClient
+        /// </summary>
+        private readonly RealClient client = new RealClient();
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ProxyClient"/> class.
         /// </summary>
@@ -25,10 +29,17 @@ namespace DesignPattern.StructuralDesignPattern.Proxy
         /// <summary>
         /// Gets the data.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>returns list of string</returns>
         public string GetData()
         {
-            return client.GetData();
+            try
+            {
+            return this.client.GetData();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }

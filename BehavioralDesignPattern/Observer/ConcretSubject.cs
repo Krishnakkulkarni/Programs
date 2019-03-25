@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ConcreteSubject.cs" company="Bridgelabz">
+// <copyright file="ConcretSubject.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name="Krishna Kulkarni"/>
 //-----------------------------------------------------------------------
@@ -9,10 +9,10 @@ namespace DesignPattern.BehavioralDesignPattern.Observer
     using System;
 
     /// <summary>
-    /// ConcreteSubject
+    /// Concrete Subject
     /// </summary>
-    /// <seealso cref="DesignPattern.Observer_Design_Pattern.Subject" />
-    public class ConcreteSubject : Subject
+    /// <seealso cref="DesignPattern.Observer_Design_Pattern.Subject"/>
+    public class ConcretSubject : Subject
     {
         /// <summary>
         /// The subject state

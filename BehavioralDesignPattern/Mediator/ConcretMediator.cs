@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ConcreteMediator.cs" company="Bridgelabz">
+// <copyright file="ConcretMediator.cs" company="Bridgelabz">
 //     Company @ 2019 </copyright>
 // <creator name="Krishna Kulkarni"/>
 //-----------------------------------------------------------------------
@@ -12,19 +12,17 @@ namespace DesignPattern.BehavioralDesignPattern.Mediator
     /// Class for concrete mediator
     /// </summary>
     /// <seealso cref="DesignPattern.Mediator_Design_Pattern.Mediator" />
-    public class ConcreteMediator : Mediator
+    public class ConcretMediator : Mediator
     {
         /// <summary>
         /// The colleague1
         /// </summary>
-        private ConcreteColleague1 colleague1;
+        private ConcretColleague1 colleague1;
 
         /// <summary>
         /// The colleague2
-        /// 
-        /// 
         /// </summary>
-        private ConcreteColleague2 colleague2;
+        private ConcretColleague2 colleague2;
 
         /// <summary>
         /// Sets the colleague1.
@@ -32,7 +30,7 @@ namespace DesignPattern.BehavioralDesignPattern.Mediator
         /// <value>
         /// The colleague1.
         /// </value>
-        public ConcreteColleague1 Colleague1
+        public ConcretColleague1 Colleague1
         {
             set { this.colleague1 = value; }
         }
@@ -43,7 +41,7 @@ namespace DesignPattern.BehavioralDesignPattern.Mediator
         /// <value>
         /// The colleague2.
         /// </value>
-        public ConcreteColleague2 Colleague2
+        public ConcretColleague2 Colleague2
         {
             set { this.colleague2 = value; }
         }

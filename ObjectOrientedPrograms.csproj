@@ -65,6 +65,8 @@
     <Compile Include="DeckOfCards\CardOfDecks.cs" />
     <Compile Include="Cards.cs" />
     <Compile Include="DeckOfQueue\DeckQueue.cs" />
+    <Compile Include="Delegats\DelegateEx.cs" />
+    <Compile Include="Delegats\Employee.cs" />
     <Compile Include="InventoryDetails\Inventory.cs" />
     <Compile Include="InventoryDetails\InventoryDetails.cs" />
     <Compile Include="InventoryDetails\InventoryModel.cs" />

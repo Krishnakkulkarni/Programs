@@ -6,12 +6,11 @@
 namespace ObjectOrientedPrograms
 {
     using System;
+    using Implementations;
     using ObjectOrientedPrograms.AddressBook;
     using ObjectOrientedPrograms.CommercialDataProcessing;
     using ObjectOrientedPrograms.DeckOfCards;
     using ObjectOrientedPrograms.DeckOfQueue;
-    using ObjectOrientedPrograms.InventoryDetails;
-    using ObjectOrientedPrograms.InventoryManager;
     using ObjectOrientedPrograms.RegularExpression;
     using ObjectOrientedPrograms.Stock;
 
@@ -39,6 +38,7 @@ namespace ObjectOrientedPrograms
                         Console.WriteLine("6. Decks OF Cards in Queue");
                         Console.WriteLine("7. AddressBook");
                         Console.WriteLine("8. Commercial Data Processing");
+                        Console.WriteLine("9. Delegats");
                         Console.WriteLine("Choose your option from above");
 
                         int choice = Convert.ToInt32(Console.ReadLine());
@@ -84,6 +84,10 @@ namespace ObjectOrientedPrograms
                                 Commercial commercial = new Commercial();
                                 commercial.InitialiseShares();
                                 break;
+
+                        case 9:
+                            DelegateEx.Delegatemain();
+                            break;
 
                             default:
                                     Console.WriteLine("Select correct choice");

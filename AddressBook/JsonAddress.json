@@ -1,1 +1,29 @@
-[{"FirstName":"krishna","LastName":"kulkarni","Address":"vashi","City":"mumbai","State":"maharashtra","ZipCode":"480001","PhoneNumber":"7070898970"},{"FirstName":"robin","LastName":"uttappa","Address":"raghavendra_colony","City":"kalburgi","State":"karnataka","ZipCode":"585102","PhoneNumber":"7080898970"},{"FirstName":"adam","LastName":"james","Address":"brahmpur","City":"Gulbarga","State":"Karnataka","ZipCode":"585103","PhoneNumber":"8070898970"}]
+[
+  {
+    "FirstName": "krishna",
+    "LastName": "kulkarni",
+    "Address": "vashi",
+    "City": "mumbai",
+    "State": "maharashtra",
+    "ZipCode": "480001",
+    "PhoneNumber": "7070898970"
+  },
+  {
+    "FirstName": "robin",
+    "LastName": "uttappa",
+    "Address": "raghavendra_colony",
+    "City": "kalburgi",
+    "State": "karnataka",
+    "ZipCode": "585102",
+    "PhoneNumber": "7080898970"
+  },
+  {
+    "FirstName": "adam",
+    "LastName": "james",
+    "Address": "brahmpur",
+    "City": "Gulbarga",
+    "State": "Karnataka",
+    "ZipCode": "585103",
+    "PhoneNumber": "8070898970"
+  }
+]

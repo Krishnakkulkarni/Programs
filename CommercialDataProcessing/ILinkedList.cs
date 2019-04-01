@@ -12,33 +12,33 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
     public interface ILinkedList<T>
     {
         /// <summary>
-        /// Instance of Add
+        /// Method of Add
         /// </summary>
         /// <param name="word">Generic type Word as a parameter</param>
         /// <returns>returns Generic type Word</returns>
         bool Add(T word);
 
         /// <summary>
-        /// Instance of Is Empty
+        /// Method of Is Empty
         /// </summary>
         /// <returns>returns empty</returns>
         bool IsEmpty();
 
         /// <summary>
-        /// Instance of Size
+        /// Method of Size
         /// </summary>
         /// <returns>returns size</returns>
         long Size();
 
         /// <summary>
-        /// Instance of Delete 
+        /// Method of Delete 
         /// </summary>
         /// <param name="wordToSearch">word To Search</param>
         /// <returns>returns delete</returns>
         bool Delete(string wordToSearch);
 
         /// <summary>
-        /// Instance of Insert
+        /// Method of Insert
         /// </summary>
         /// <param name="data">data as a parameter</param>
         /// <param name="position">position is a parameter</param>
@@ -46,12 +46,12 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
         bool Insert(T data, long position);
 
         /// <summary>
-        /// Instance of Print
+        /// Method of Print
         /// </summary>
         void Print();
 
         /// <summary>
-        ///  Instance of Contains
+        ///  Method of Contains
         /// </summary>
         /// <param name="word">word as a parameter</param>
         /// <returns>returns word</returns>
